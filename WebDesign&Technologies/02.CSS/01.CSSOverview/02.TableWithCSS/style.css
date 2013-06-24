@@ -1,0 +1,72 @@
+﻿body, form, table, thead, tr, th, tbody, td, img, input {
+    margin: 5px;
+    padding: 0px;
+}
+
+body {
+    font-family: Arial;
+    text-align: left;
+}
+
+table {
+    border-spacing: 0px;
+    border-collapse:collapse;
+}
+
+tr {
+    width: 200px;
+    height: 30px;
+    text-align: justify;
+}
+
+th {
+    padding-left: 10px;
+    padding-right: 60px;
+    border-style: inset;
+    border-width: 0px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-right-color: #6dc229;
+    border-bottom-color: #4f9f1e;
+    background-color: #59bc06;
+    color: white;
+}
+
+td {
+    padding-left: 10px;
+    padding-right: 60px;
+    border-style: inset;
+    border-width: 0px;
+    border-right-width: 2px;
+    border-right-color: #d3d2c0;
+}
+
+.no-border-right {
+    border-right: 0px;
+}
+
+tr:nth-child(2n) {
+    background-color: #ececd8;
+}
+
+tr:nth-child(2n + 1) {
+    background-color: #ffffff;
+}
+
+tr td img {
+    width: 26px;
+    height: 17px;
+    vertical-align: middle;
+}
+
+input {
+    background-color: #6c6b68;
+}
+
+    input:disabled {
+        background-color: #6c6b68;
+    }
+
+    input:checked {
+        color: #6c6b68;
+    }

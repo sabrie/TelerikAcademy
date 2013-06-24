@@ -1,0 +1,74 @@
+﻿body, header, h1, nav, ul, li, a, section, article, p, footer {
+    margin: 5px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Times New Roman';
+    background-color: #a9a9a9;
+}
+
+h1 {
+    color: #fafad2;
+    line-height: 100px;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 55px;
+}
+
+nav ul {
+    text-align: center;
+    list-style-type: none;
+
+    padding: 0px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+    
+    nav ul li a.current {
+        background-color: #d3d3d3;
+    }
+    nav ul li:nth-last-child(1) {
+        text-decoration: underline;
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+section article header h1 {
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer p {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+    footer p a {
+        text-decoration: none;
+        color: black;
+    }
+
+/* selects the footer element which is at the same level and after the section element */
+section + footer {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 50px;
+}

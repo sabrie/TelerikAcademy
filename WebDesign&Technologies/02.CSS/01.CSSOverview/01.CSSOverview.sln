@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.CSSPresentationOfTable", "01.CSSPresentationOfTable\01.CSSPresentationOfTable.csproj", "{78F46F3A-AA7D-4CD0-849F-9499E2B203B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.CreateWebPageUsingGivenDesign", "03.CreateWebPageUsingGivenDesign\03.CreateWebPageUsingGivenDesign.csproj", "{6AA342DD-F36E-4240-8B01-EF1E0E7B55A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.TableWithCSS", "02.TableWithCSS\02.TableWithCSS.csproj", "{2C313E47-A8B4-4D2F-AEBF-FB2EAC336564}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78F46F3A-AA7D-4CD0-849F-9499E2B203B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78F46F3A-AA7D-4CD0-849F-9499E2B203B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78F46F3A-AA7D-4CD0-849F-9499E2B203B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78F46F3A-AA7D-4CD0-849F-9499E2B203B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AA342DD-F36E-4240-8B01-EF1E0E7B55A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA342DD-F36E-4240-8B01-EF1E0E7B55A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA342DD-F36E-4240-8B01-EF1E0E7B55A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA342DD-F36E-4240-8B01-EF1E0E7B55A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C313E47-A8B4-4D2F-AEBF-FB2EAC336564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C313E47-A8B4-4D2F-AEBF-FB2EAC336564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C313E47-A8B4-4D2F-AEBF-FB2EAC336564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C313E47-A8B4-4D2F-AEBF-FB2EAC336564}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

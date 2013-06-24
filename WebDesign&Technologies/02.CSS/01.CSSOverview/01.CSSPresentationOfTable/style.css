@@ -1,0 +1,59 @@
+﻿body, header, h1, section, table, tr, td, a, span {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #595959;
+    font-family: Arial;
+}
+
+header h1 {
+    padding: 7px;
+    text-align:left;
+    font-size: 25px;
+    font-weight: normal;
+    color: #afb1a4;
+}
+
+td {
+    padding: 7px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+td.data-type {
+    color: #bdbfb4;
+    font-style: italic;
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+td.client-data {
+    color: #cada9a;
+}
+td a {
+    text-decoration: none;
+    color: #cada9a;
+}
+
+    td a:hover {
+        text-decoration: underline;
+    }
+
+td span.active-support {
+    color: #cb2b33;
+}
+td span.circle {
+    border-radius: 50%;
+    background-color: #71b47a;
+    
+}
+
+td.response {
+    color: #afb1a4;
+}
+td#answer {
+    color: #d86a29;
+}
+
