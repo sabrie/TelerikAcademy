@@ -1,0 +1,38 @@
+﻿
+body {
+    background-color: black;
+}
+
+button {
+    padding: 5px;
+    width: 80px;
+}
+
+.clearfix:after, .carousel-panels:after {
+    display: table;
+    content: " ";
+    clear: both;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-panels {
+    position: relative;
+    left: 0;
+    width: 10000%;
+}
+
+.carousel-panel {
+    float: left;
+    width: 1%;
+}
+
+.carousel-demo {
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 620px;
+    text-align: center;
+}

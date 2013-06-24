@@ -1,0 +1,16 @@
+﻿body, div, table thead, tbody, tr, th, td  {
+    margin: 0px;
+    padding: 0px;
+}
+
+table {
+    margin-left: 20px;
+    margin-top: 20px;
+    border-collapse:collapse;
+    border: 2px solid black;
+}
+
+th, td {
+    padding: 5px;
+    border: 2px solid black;
+}

@@ -1,0 +1,21 @@
+﻿<!-- Using jQuery implement functionality to insert a DOM 
+    element before or after another element -->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Insert DOM Element before or after another</title>
+</head>
+<body>
+    <div id="main-container">
+        <h1 id="title">Here is the title</h1>
+        <div id="inner-div">This is the inner div</div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script>
+        var insertedBefore = $("#inner-div").before("<p>This is a paragraph inserted before the inner div");
+        var insertedAfter = $("#title").after("<p>This is a paragraph inserted after the title");
+    </script>
+</body>
+</html>

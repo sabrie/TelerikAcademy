@@ -1,0 +1,45 @@
+﻿<!--Implement functionality to change the background color of a web page
+i.e. select a color from a color picker and set this color as the 
+background color of the page-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Change Background color</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body id="body">
+    <p>Click on a box to change the background color</p>
+    <div id="gray" class="clearfix"></div>
+    <div id="red"></div>
+    <div id="green"></div>
+    <div id="blue" class="clearfix"></div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script>
+        //$('#red').click(function () {
+        //    $("#body").addClass("red")
+        //});
+
+        $('#red').click(function(){
+            var color = $(this).css("background-color");
+            $("#body").css("background-color", color)
+        });
+
+        $('#green').click(function () {
+            var color = $(this).css("background-color");
+            $("#body").css("background-color", color)
+        });
+
+        $('#blue').click(function () {
+            var color = $(this).css("background-color");
+            $("#body").css("background-color", color)
+        });
+
+        $('#gray').click(function () {
+            var color = $(this).css("background-color");
+            $("#body").css("background-color", color)
+        });
+    </script>
+</body>
+</html>

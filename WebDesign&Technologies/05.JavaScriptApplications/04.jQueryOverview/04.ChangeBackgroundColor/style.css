@@ -1,0 +1,49 @@
+﻿body, p, div{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #dedede;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+p{
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+div{
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    float: left;
+}
+
+#red{
+    background-color: #ea6d6d;
+}
+
+#green{
+    background-color: #aede35;
+}
+
+#blue{
+    background-color: #3a3ad8;
+}
+
+#gray{
+    background-color: #dedede;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix:before {
+    clear: both;
+}
+
