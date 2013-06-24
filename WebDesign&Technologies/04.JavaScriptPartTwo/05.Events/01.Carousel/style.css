@@ -1,0 +1,24 @@
+﻿body, ol, li, a, img, button {
+    margin: 0px;
+    padding: 0px;    
+}
+
+body {
+    background: black;
+    text-align: center;
+}
+
+#carousel {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    padding: 5px;
+    width: 80px;
+}

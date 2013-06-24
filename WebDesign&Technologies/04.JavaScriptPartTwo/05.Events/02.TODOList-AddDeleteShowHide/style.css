@@ -1,0 +1,32 @@
+﻿body, form, button, input, ol, li, h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    text-align: center;
+}
+
+#wrapper {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, form {
+    padding: 10px;
+    margin: 10px;
+    width: 550px;
+    font-size: 25px;
+    background-color: #dedede;
+    border-radius: 6px;
+}
+
+ol {
+    text-align: left;
+}
+
+button {
+    padding: 5px;
+    width: 80px;
+}
