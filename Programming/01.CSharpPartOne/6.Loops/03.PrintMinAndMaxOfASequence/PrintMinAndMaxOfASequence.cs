@@ -51,38 +51,3 @@ class PrintMinAndMaxOfASequence
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-//        int min, max, myNum;
-//        Console.Write("\tN ? ");
-//        int n = int.Parse(Console.ReadLine());
-        
-//        if (n <= 0)
-//        {
-//            Console.WriteLine("\nMin=null\nMax=null\n");
-//            return;
-//        }
-//        else if (1 == n)
-//        {
-//            min = max = int.Parse(Console.ReadLine());
-//        }
-//        else // n>1
-//        {
-//            min = max = int.Parse(Console.ReadLine());
-//            for (int i = 1; i < n; i++)
-//            {
-//                myNum = int.Parse(Console.ReadLine());
-//                min = (min < myNum) ? min : myNum;
-//                max = (max > myNum) ? max : myNum;
-//            }
-//        }
-//        Console.WriteLine("\nMin={0}\nMax={1}", min, max);
