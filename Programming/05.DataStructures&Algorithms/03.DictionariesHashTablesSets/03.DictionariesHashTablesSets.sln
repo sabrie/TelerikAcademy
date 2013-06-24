@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.FindElementOccurencesInArray", "01.FindElementOccurencesInArray\01.FindElementOccurencesInArray.csproj", "{D152EDB0-B55A-46A5-84B9-D7FC4553B42D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.RemoveElementsOccuringOddTimes", "02.RemoveElementsOccuringOddTimes\02.RemoveElementsOccuringOddTimes.csproj", "{C723AD4C-6F07-48E1-803E-7EB8EC19BEE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.FindWordOccurencesInGivenText", "03.FindWordOccurencesInGivenText\03.FindWordOccurencesInGivenText.csproj", "{FE04C9FF-527B-443D-9E6F-F84AB75FE729}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Hashtable", "04.Hashtable\04.Hashtable.csproj", "{AF17BA72-5AF4-4FB9-8AFA-7E7F3C05F1A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D152EDB0-B55A-46A5-84B9-D7FC4553B42D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D152EDB0-B55A-46A5-84B9-D7FC4553B42D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D152EDB0-B55A-46A5-84B9-D7FC4553B42D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D152EDB0-B55A-46A5-84B9-D7FC4553B42D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C723AD4C-6F07-48E1-803E-7EB8EC19BEE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C723AD4C-6F07-48E1-803E-7EB8EC19BEE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C723AD4C-6F07-48E1-803E-7EB8EC19BEE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C723AD4C-6F07-48E1-803E-7EB8EC19BEE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE04C9FF-527B-443D-9E6F-F84AB75FE729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE04C9FF-527B-443D-9E6F-F84AB75FE729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE04C9FF-527B-443D-9E6F-F84AB75FE729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE04C9FF-527B-443D-9E6F-F84AB75FE729}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF17BA72-5AF4-4FB9-8AFA-7E7F3C05F1A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF17BA72-5AF4-4FB9-8AFA-7E7F3C05F1A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF17BA72-5AF4-4FB9-8AFA-7E7F3C05F1A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF17BA72-5AF4-4FB9-8AFA-7E7F3C05F1A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
