@@ -1,0 +1,27 @@
+﻿<script>
+
+    /* Write a script that shows the sign (+ or -) of the product of three 
+    real numbers without calculating it. Use a sequence of if statements.*/
+
+    // Click Ctrl + F5 to see the result in browser
+    var firstNumber = -1;
+    var secondNumber = -2;
+    var thirdNumber = 4;
+
+    document.write("The product of the three numbers is: ");
+
+    if (firstNumber === 0 || secondNumber === 0 || thirdNumber === 0) {
+        Console.WriteLine(" 0.");
+    }
+    else {
+        if ((firstNumber > 0 && secondNumber > 0 && thirdNumber > 0) ||
+            (firstNumber < 0 && secondNumber < 0 && thirdNumber > 0) ||
+            (firstNumber > 0 && secondNumber < 0 && thirdNumber < 0) ||
+            (firstNumber < 0 && secondNumber > 0 && thirdNumber < 0)) {
+            document.write("positive.");
+        }
+        else {
+            document.write("negative.");
+        }
+    }
+</script>

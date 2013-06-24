@@ -1,0 +1,31 @@
+﻿<script>
+    /* Write a script that enters the coefficients a, b and c of a quadratic equation
+        a*x2 + b*x + c = 0
+        and calculates and prints its real roots. Note that quadratic equations may have 0, 1 or 2 real roots.
+    */
+
+    // click Ctrl + F5 to check the program in browser
+
+    // read and parse a number
+    var a = parseInt(prompt("Enter a value for coefficient a"));
+    var b = parseInt(prompt("Enter a value for coefficient b"));
+    var c = parseInt(prompt("Enter a value for coefficient c"));
+    var discriminant = (b * b) - (4 * a * c);
+    // x1 and x2 are the solutions.
+    var x1, x2, result;
+    if (isNaN(a) || isNaN(b) || isNaN(c)) {
+        document.write("a, b, c must be a number");
+    }
+    if (discriminant === 0) { // If the discriminant is 0, x1=x2.
+    
+        x1 = -b / (2 * a);
+        document.write("The solution is x = " + x1);
+    } else if (discriminant < 0) { // If the discriminant is negative, there are no solutions.
+
+        document.write("There are no solutions for the equation!");
+    } else { // In other cases the discriminant is positive, so there are two different solutions.
+        x1 = (-b - Math.sqrt(discriminant)) / (2 * a);
+        x2 = (-b + Math.sqrt(discriminant)) / (2 * a);
+        document.write("The solutions are x1 = " + x1 + ", x2 = " + x2);
+    }
+</script>

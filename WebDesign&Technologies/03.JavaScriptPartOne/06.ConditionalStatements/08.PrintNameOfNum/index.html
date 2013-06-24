@@ -1,0 +1,154 @@
+﻿<script>
+    /* Write a script that converts a number in the range [0...999] to a text corresponding to its English pronunciation. 
+    Examples:
+	0 -> "Zero"
+	273 -> "Two hundred seventy three"
+	400 -> "Four hundred"
+	501 -> "Five hundred and one"
+	711 -> "Seven hundred and eleven"
+*/
+    // Click Ctrl + F5 to see the result in browser 
+    var number = 105;
+    var hundreds = parseInt(number / 100);
+    var tens = parseInt((number - hundreds * 100) / 10);
+    var ones = parseInt(number % 10);
+
+    document.write(number + " -> ");
+
+    switch (hundreds)
+    {
+        case 1: document.write("One hundred "); break;
+        case 2: document.write("Two hundred "); break;
+        case 3: document.write("Three hundred "); break;
+        case 4: document.write("Four hundred "); break;
+        case 5: document.write("Five hundred "); break;
+        case 6: document.write("Six hundred "); break;
+        case 7: document.write("Seven hundred "); break;
+        case 8: document.write("Eight hundred "); break;
+        case 9: document.write("Nine hundred "); break;
+        default: document.write(""); break;
+    }
+
+    if (tens != 1) {
+        if (hundreds != 0) {
+            switch (tens)
+            {
+                case 2: document.write("twenty "); break;
+                case 3: document.write("thirty "); break;
+                case 4: document.write("fourty "); break;
+                case 5: document.write("fifty "); break;
+                case 6: document.write("sixty "); break;
+                case 7: document.write("seventy "); break;
+                case 8: document.write("eighty "); break;
+                case 9: document.write("ninety "); break;
+                default: document.write(""); break;
+            }
+        } else {
+            switch (tens)
+            {
+                case 2: document.write("Twenty "); break;
+                case 3: document.write("Thirty "); break;
+                case 4: document.write("Fourty "); break;
+                case 5: document.write("Fifty "); break;
+                case 6: document.write("Sixty "); break;
+                case 7: document.write("Seventy "); break;
+                case 8: document.write("Eighty "); break;
+                case 9: document.write("Ninety "); break;
+                default: document.write(""); break;
+            }
+        }
+        if (hundreds != 0) {
+            if (tens === 0) {
+                switch (ones)
+                {
+                    case 1: document.write("and one"); break;
+                    case 2: document.write("and two"); break;
+                    case 3: document.write("and three"); break;
+                    case 4: document.write("and four"); break;
+                    case 5: document.write("and five"); break;
+                    case 6: document.write("and six"); break;
+                    case 7: document.write("and seven"); break;
+                    case 8: document.write("and eight"); break;
+                    case 9: document.write("and nine"); break;
+                    default: document.write(""); break;
+                }
+            } else {
+                switch (ones)
+                {
+                    case 1: document.write("one"); break;
+                    case 2: document.write("two"); break;
+                    case 3: document.write("three"); break;
+                    case 4: document.write("four"); break;
+                    case 5: document.write("five"); break;
+                    case 6: document.write("six"); break;
+                    case 7: document.write("seven"); break;
+                    case 8: document.write("eight"); break;
+                    case 9: document.write("nine"); break;
+                    default: document.write(""); break;
+                }
+            }
+        } else {
+            if (hundreds === 0 && tens === 0) {
+                switch (ones)
+                {
+                    case 0: document.write("Zero"); break;
+                    case 1: document.write("One"); break;
+                    case 2: document.write("Two"); break;
+                    case 3: document.write("Three"); break;
+                    case 4: document.write("Four"); break;
+                    case 5: document.write("Five"); break;
+                    case 6: document.write("Six"); break;
+                    case 7: document.write("Seven"); break;
+                    case 8: document.write("Eight"); break;
+                    case 9: document.write("Nine"); break;
+                    default: document.write(""); break;
+                }
+            } else {
+                switch (ones)
+                {
+                    case 1: document.write("one"); break;
+                    case 2: document.write("two"); break;
+                    case 3: document.write("three"); break;
+                    case 4: document.write("four"); break;
+                    case 5: document.write("five"); break;
+                    case 6: document.write("six"); break;
+                    case 7: document.write("seven"); break;
+                    case 8: document.write("eight"); break;
+                    case 9: document.write("nine"); break;
+                    default: document.write(""); break;
+                }
+
+            }
+        }
+    } else {
+        if (hundreds != 0) {
+            switch (ones)
+            {
+                case 1: document.write("and eleven"); break;
+                case 2: document.write("and twelve"); break;
+                case 3: document.write("and thirteen"); break;
+                case 4: document.write("and fourteen"); break;
+                case 5: document.write("and fifteen"); break;
+                case 6: document.write("and sixteen"); break;
+                case 7: document.write("and seventeen"); break;
+                case 8: document.write("and eighteen"); break;
+                case 9: document.write("and nineteen"); break;
+                default: document.write("and ten"); break;
+            }
+        } else {
+            switch (ones)
+            {
+                case 1: document.write("Eleven"); break;
+                case 2: document.write("Twelve"); break;
+                case 3: document.write("Thirteen"); break;
+                case 4: document.write("Fourteen"); break;
+                case 5: document.write("Fifteen"); break;
+                case 6: document.write("Sixteen"); break;
+                case 7: document.write("Seventeen"); break;
+                case 8: document.write("Eighteen"); break;
+                case 9: document.write("Nineteen"); break;
+                default: document.write("Ten"); break;
+            }
+        }
+    }
+</script>

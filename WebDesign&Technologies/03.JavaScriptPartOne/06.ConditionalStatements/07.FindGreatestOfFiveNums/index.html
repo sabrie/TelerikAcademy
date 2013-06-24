@@ -1,0 +1,22 @@
+﻿<script>
+    /* Write a script that finds the greatest of given 5 variables. */
+
+    // Click Ctrl + F5 to see the result in browser
+
+    var firstNum = 1;
+    var secondNum = 2;
+    var thirdNum = 3;
+    var forthNum = 4;
+    var fifthNum = 5;
+
+    var greatestFirstSecondThird = Math.max(Math.max(firstNum, secondNum), thirdNum);
+    var greatestForthFifth = Math.max(forthNum, fifthNum);
+
+    document.write("The greatest number is: ");
+
+    if (greatestFirstSecondThird > greatestForthFifth) {
+        document.write(greatestFirstSecondThird);
+    } else {
+        document.write(greatestForthFifth);
+    }
+</script>

@@ -1,0 +1,20 @@
+﻿<script>
+    /* Write an if statement that examines two integer variables and exchanges
+    * their values if the first one is greater than the second one. */
+
+    /* Click Ctrl + F5 to see the result in browser */
+    var firstNumber = 25;
+    var secondNumber = 12;
+
+    if (firstNumber > secondNumber) {
+        document.write("The first number is greater than the second number and the program will exchange their values. ");
+        var exchange = firstNumber;
+        firstNumber = secondNumber;
+        secondNumber = exchange;
+
+        document.write("First number = " + firstNumber + ", Second number = " + secondNumber);
+    } else {
+        document.write("The first number is smaller than the second number \nand the program will print their values.");
+        document.write("First number = " + firstNumber + ", Second number = " + secondNumber);
+    }
+</script>

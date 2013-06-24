@@ -1,0 +1,37 @@
+﻿<script>
+    /* Sort 3 real values in descending order using nested if statements. */
+
+    // Click Ctrl + F5 to see the result in browser
+    var firstNum = 1;
+    var secondNum = 2;
+    var thirdNum = 3;
+    var exchange;
+    document.write("Numbers in descending order are: ");
+    if (secondNum > firstNum) {
+
+        exchange = firstNum;
+        firstNum = secondNum;
+        secondNum = exchange;
+        if (thirdNum > secondNum) {
+            exchange = thirdNum;
+            thirdNum = secondNum;
+            secondNum = exchange;
+        }
+        if (secondNum > firstNum) {
+            exchange = firstNum;
+            firstNum = secondNum;
+            secondNum = exchange;
+        }
+    }
+    if (thirdNum > secondNum) {
+        exchange = thirdNum;
+        thirdNum = secondNum;
+        secondNum = exchange;
+        if (secondNum > firstNum) {
+            exchange = firstNum;
+            firstNum = secondNum;
+            secondNum = exchange;
+        }
+    }
+    document.write(firstNum + ", " + secondNum + ", " + thirdNum);
+</script>
