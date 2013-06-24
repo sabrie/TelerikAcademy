@@ -1,0 +1,122 @@
+﻿body, div, header, nav, ul, li, a, h1, h2, img {
+    margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #000000;
+	text-align: center;
+	margin-top: 20px;
+    font-family: Tahoma;
+}
+
+div#main-container {
+	background-color: #1e3741;
+	text-align: left;
+	width: 690px;
+	border: 1px solid #00968c;
+	border-radius: 5px;
+	margin-right: auto;
+	margin-left: auto;
+}
+    div#main-container header#header {
+	    display: block;
+	    clear: both;
+	    width: 690px;
+    }
+
+        header#header div.title {
+	        font-size: 12px;
+	        font-weight: bold;
+	        color: #FFF;
+	        text-align: center;
+	        height: 25px;
+	        width: auto;
+	        float: left;
+	        padding: 12px 10px 0px 10px;
+        }
+
+        header#header nav ul {
+            list-style-type: none;
+            background-color: none;
+            height: 31px;
+            width: 550px;
+	        padding-top: 4px;	        
+	        padding-left: 10px;
+	        float: left;	
+        }
+
+            header#header nav ul a {
+            	background-color: #4b5f67;
+            	color: #abc1bc;
+            	font-weight: bold;
+            	text-decoration: none;
+            	
+            	font-size: 12px;
+            	float: left;
+                height: 25px;
+            	margin-left: 2px;	
+            	padding: 8px 12px 1px 12px;
+            }
+
+                header#header nav ul a:hover {
+                	color: #1e3741;
+                	background-color: #abc1bc;
+                	float: left;
+                }
+
+    div#main-container div#ColumnLeft {
+    	height: auto;
+    	width: 264px;
+    	float: left;
+    	text-align: left;
+    	padding-top: 15px;
+    }
+        div#ColumnLeft header.NewsDate {
+	        font-size: 13px;
+	        background-color: #00968c;
+	        width: 244px;
+	        color: #FFF;
+	        padding: 10px;
+	        height: 20px;
+	        font-weight: bold;
+        }
+        
+        div#ColumnLeft div.News {
+        	width: 244px;
+        	padding: 10px;
+        	height: auto;
+        
+        }
+
+        div#ColumnLeft div.Line {
+	        font-size: 13px;
+	        background-color: #00968c;
+	        width: 264px;
+	        color: #FFF;
+	        height: 1px;
+	        font-weight: bold;
+        }
+
+    div#main-container div#ColumnRight {
+    	height: auto;
+    	width: auto;
+    	float: left;
+    	padding-top: 15px;
+    }
+
+    h1 {
+	    font-size:13px;
+    }
+    
+    h2 {
+	    font-size:13px;
+        color: #abc1bc;
+        font-weight: bold;
+    }
+
+    #footer {
+	    clear: both;
+	    width: 690px;
+	    display: block;
+    }

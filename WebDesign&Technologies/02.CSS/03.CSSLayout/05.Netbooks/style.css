@@ -1,0 +1,104 @@
+﻿body {
+	background-color: #FFF;
+	text-align: center;
+	margin-top: 20px;
+}
+    div#main-wrapper {
+    	background-color: #FFF;
+    	text-align: left;
+    	padding: 10px;
+    	width: 664px;
+    	border-bottom: 2px solid #000;   
+    	margin-right: auto;    
+    	margin-left: auto;
+    }
+
+        div#header nav ul {
+        	display: block;        
+        	clear: both;
+        	width: 664px;
+        	text-align: center;
+	    	margin-right: auto;
+	        margin-left: auto;
+            padding-left: 100px;
+            list-style-type: none;
+        }
+
+            div#header nav ul li a {
+	            color: #04afef;
+	            text-decoration: underline;
+	            font-family: Tahoma;
+	            font-size: 22px;
+	            float: left;
+	            height: 25px;	        
+	            padding-left: 8px;
+            }
+                div#header nav ul li a:hover {
+                	color: #04afef;
+                	text-decoration: none;
+                	float: left;
+                }
+
+        div#main-wrapper div#Column-netbooks {
+	        padding: 5px;
+	        width: 422px;
+	        height: auto;
+	        border: 2px solid #000;
+	        float: left;
+	        margin-top: 20px;
+        }
+            div#Column-netbooks #Column-netbooks-left {
+	            width: 210px;
+	            float: left;
+	            text-align: left;	
+            }
+            
+            div#Column-netbooks #Column-netbooks-right {
+	            width: 210px;
+	            float: right;
+	            text-align: left;
+            }
+
+            div.Netbooks {
+	            font-size: 17px;
+                font-family: Corbel;
+	            text-align: right;
+                color: #000;
+                font-weight: bold;
+	            width: 210px;	        
+	            height: 130px;	        
+	            background-image: url(images/PC.jpg);
+	            background-repeat: no-repeat;
+            }
+
+            div#main-wrapper div#column-slider {
+	            height: auto;
+	            width: auto;
+	            float: left;
+	            padding-top: 15px;
+                padding-left: 20px;
+                margin-top: 70px;
+	            text-align: left;
+            }
+
+                div#column-slider span.Price {
+	                font-size: 17px;
+	                color: #000;
+	                font-weight: bold;
+	                font-family: Corbel;
+	                text-align: left;
+                }
+
+                div#column-slider span.range {
+	                width: 100px;
+	                font-size: 17px;
+	                color: #000;
+	                font-weight: bold;
+	                font-family: Corbel;
+                }
+
+        #footer {
+        	clear: both;
+        	width: 664px;
+        	display: block;
+        }
