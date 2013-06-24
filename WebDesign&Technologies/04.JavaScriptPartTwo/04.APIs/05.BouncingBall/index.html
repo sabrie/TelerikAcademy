@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bouncing ball</title>
+    <style>
+        canvas {
+            border: 3px solid green;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+    <canvas id="canvas" width="400" height="300">
+        This text is displayed if your browser does not support HTML5 Canvas. 
+    </canvas>
+    <script src="scripts/Point.js"></script>
+    <script src="scripts/source.js"></script>
+    -->
+
+    <script>
+        var suitCase = document.getElementById('suitcase');
+
+        function changeSuitState(state) {
+            var img = document.getElementById("suitcase");
+            img.src = "" + state + "Suitcase.png";
+        }
+
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("dragged-id", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("dragged-id");
+            var elementToRemove = document.getElementById(data);
+            container.removeChild(elementToRemove);
+        }
+
+        //load some more styles
+        function LoadImages() {
+            suitcase.style.display = "inline";
+            suitcase.style.cssFloat = "left";
+
+            var container = document.getElementById("container");
+            container.style.display = "inline";
+            container.style.cssFloat = "right";
+            container.style.width = 400 + "px";
+            container.style.height = 100 + "px";
+        }
+        
+    </script>
+
+</body>
+</html>
