@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>01. Create School Using Prototypal OOP</title>
+</head>
+<body>
+    <script src="Person.js"></script>
+    <script src="Student.js"></script>
+    <script src="Teacher.js"></script>
+    <script src="SchoolClass.js"></script>
+    <script src="School.js"></script>
+    <script>
+        (function () {
+            // Tests inheritance and introduce(); method for Person, Student and Teacher
+            var person = new Person('Gosho', 'Petrov', 30);
+            console.log(person.introduce());
+
+            var student = new Student('Pesho', 'Ivanov', 20, 6);
+            console.log(student.introduce());
+
+            var teacher = new Teacher('Svetlin', 'Nakov', 28, "C# Trainer");
+            console.log(teacher.introduce());
+
+            // Creates C# Class
+            var cSharpClassStudents = [
+                new Student('Pesho1', 'Ivanov1', 20, 6),
+                new Student('Pesho2', 'Ivanov2', 20, 4),
+                new Student('Pesho3', 'Ivanov3', 20, 6),
+                new Student('Pesho4', 'Ivanov4', 20, 5),
+                new Student('Pesho5', 'Ivanov5', 20, 3),
+                new Student('Pesho6', 'Ivanov6', 20, 3),
+                new Student('Pesho7', 'Ivanov7', 20, 6),
+            ];
+
+            var formTeacherCSharp = new Teacher('Svetlin', 'Nakov', 28, "C# Trainer");
+            var cSharpClass = new Class("C#", 12, cSharpClassStudents, formTeacherCSharp);
+            cSharpClass.addStudent(new Student('Pesho8', 'Ivanov8', 20, 100));
+            cSharpClass.print();
+
+            // Creates JavaScript Class
+            var jSClassStudents = [
+               new Student('Gosho1', 'Goshev1', 20, 3),
+               new Student('Gosho2', 'Goshev2', 20, 4),
+               new Student('Gosho3', 'Goshev3', 20, 6),
+               new Student('Gosho4', 'Goshev4', 20, 3),
+               new Student('Gosho5', 'Goshev5', 20, 2),
+               new Student('Gosho6', 'Goshev6', 20, 3),
+               new Student('Gosho7', 'Goshev7', 20, 6),
+            ];
+
+            var formTeacherJSClass = new Teacher('Niki', 'Kostov', 28, "JavaScript Trainer");
+            var jSClass = new Class("JavaScript", 20, jSClassStudents, formTeacherJSClass);
+            jSClass.print();
+
+            // * Implement a repository to keep students and teachers in schools
+            // Creates School
+            var allClasses = [
+                cSharpClass,
+                jSClass
+            ];
+
+            var school = new School("Telerik Academy", "Sofia", allClasses);
+            school.print()
+        }());
+    </script>
+</body>
+</html>
