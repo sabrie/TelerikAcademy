@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.RandomDivs", "01.RandomDivs\01.RandomDivs.csproj", "{BD8E29AF-5390-4D2E-A579-055E8B2AB426}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.MoveDivsInCircular", "02.MoveDivsInCircular\02.MoveDivsInCircular.csproj", "{5E24F1E5-6FB5-41AE-AFFC-CF9D3497D96D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.ChangeFontBackgroundColor", "04.ChangeFontBackgroundColor\04.ChangeFontBackgroundColor.csproj", "{F0536D2C-A171-4759-94DF-D6641A6D35F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.QuerySelectorShim", "03.QuerySelectorShim\03.QuerySelectorShim.csproj", "{16626972-572B-4DF7-B725-823D2BB6747F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.TagCloud", "05.TagCloud\05.TagCloud.csproj", "{A092BA5D-37E6-4FA3-A16F-A6F4A98FD7A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD8E29AF-5390-4D2E-A579-055E8B2AB426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD8E29AF-5390-4D2E-A579-055E8B2AB426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD8E29AF-5390-4D2E-A579-055E8B2AB426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD8E29AF-5390-4D2E-A579-055E8B2AB426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E24F1E5-6FB5-41AE-AFFC-CF9D3497D96D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E24F1E5-6FB5-41AE-AFFC-CF9D3497D96D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E24F1E5-6FB5-41AE-AFFC-CF9D3497D96D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E24F1E5-6FB5-41AE-AFFC-CF9D3497D96D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0536D2C-A171-4759-94DF-D6641A6D35F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0536D2C-A171-4759-94DF-D6641A6D35F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0536D2C-A171-4759-94DF-D6641A6D35F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0536D2C-A171-4759-94DF-D6641A6D35F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16626972-572B-4DF7-B725-823D2BB6747F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16626972-572B-4DF7-B725-823D2BB6747F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16626972-572B-4DF7-B725-823D2BB6747F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16626972-572B-4DF7-B725-823D2BB6747F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A092BA5D-37E6-4FA3-A16F-A6F4A98FD7A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A092BA5D-37E6-4FA3-A16F-A6F4A98FD7A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A092BA5D-37E6-4FA3-A16F-A6F4A98FD7A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A092BA5D-37E6-4FA3-A16F-A6F4A98FD7A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
