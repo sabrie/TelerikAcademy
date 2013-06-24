@@ -1,0 +1,17 @@
+﻿<script>
+    // Write a function that finds all the occurrences of word in a text.
+    // The search can case sensitive or case insensitive
+    // Use function overloading
+
+    // Click Ctrl + F5 to see the result in browser
+
+    function findOccurrencesOf(text, word) {
+        var regExp = new RegExp("\\b" + word + "\\b", "gi");
+        return text.match(regExp).length; // returns the occurences of the word	
+    }
+    
+    var text = "We are living in an yellow submarine. We don't have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days";
+    var word = "submarine";
+    
+    document.write(word + " -> " + findOccurrencesOf(text, word) + " times");
+</script>

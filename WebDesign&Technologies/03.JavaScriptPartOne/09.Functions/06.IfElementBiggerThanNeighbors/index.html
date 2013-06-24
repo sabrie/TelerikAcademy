@@ -1,0 +1,41 @@
+﻿<script>
+
+    // Write a function that checks if the element at given position in given array of 
+    // integers is bigger than its two neighbors (when such exist).
+	
+    // Click Ctrl + F5 to see the result in browser
+
+    function IsIndexInRange(arr, i) {
+        var isInRange = true;
+        if (i < 1 || i > arr.length - 2) {
+            isInRange = false;
+        }
+        return isInRange;
+    }
+
+    function IsBiggerThanNeighbours(array, i) {
+        var isBigger = true;
+        if (array[i] < array[i + 1] || array[i] < array[i - 1])
+        {
+            isBigger = false;
+        }
+        return isBigger;
+    }
+
+    var array = [1, 3, 10, 4, 0, 3, 15, 4 ];         
+    var index = 3;
+  
+    if (IsIndexInRange(array, index)) {
+
+        document.write("The element at position " + index);
+
+        if (IsBiggerThanNeighbours(array, index)) {
+			 document.write(" is bigger");
+        } else {
+        document.write(" is NOT bigger");
+        }
+        document.write(" than its left and right neighbours.");
+    } else {
+        document.write("Index is out of range! Should be in the range 1 - " + array.length - 2);
+    }
+</script>

@@ -1,0 +1,26 @@
+﻿<script>
+    // Write a method that returns the index of the first element in array 
+    // that is bigger than its neighbors, or -1, if there’s no such element.
+    // Use the method from the previous exercise. 
+    
+    // Click Ctrl + F5 to see the result in browser
+    
+    function GetIndexOfBiggerThanNeighbours(array) {
+        for (var index = 1; index < array.length - 1; index++) {
+            if (array[index] > array[index + 1] && array[index] > array[index - 1]) {
+                return index;
+            }            
+        }
+        return -1;
+    }
+
+        var array = [ 1, 3, 10, 4, 0, 3, 15, 4 ]; // 2
+        //var array = [ 5, 3, 2, 1, 0, 4, 8, 9 ]; // There is not an element bigger than its two neighbors
+
+        if (GetIndexOfBiggerThanNeighbours(array) > 0) {
+            document.write("The index of the first number in array ");
+            document.write("which is bigger than its neighbours is: " + GetIndexOfBiggerThanNeighbours(array));
+        } else {
+            document.write("There is not an element in the array which is bigger than its two neighbours!");
+        }
+</script>

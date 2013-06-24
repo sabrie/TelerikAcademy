@@ -1,0 +1,25 @@
+﻿<script>
+    // Write a function that counts how many times given number appears in given array. 
+    // Write a test function to check if the function is working correctly.
+
+    // Click Ctrl + F5 to see the result in browser
+
+    // how many times a particuliar number appears in a given array
+    function CountOccurrencesOf(number, array)
+    {
+        var numberOfOccurances = 0;
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] === number) {
+                numberOfOccurances++;
+            }
+        }
+        return numberOfOccurances;
+    }
+
+    var arr = [ 4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3 ];
+    var number = 4;
+
+    var numberOfOccurences = CountOccurrencesOf(number, arr);
+    document.write("Number " + number + " appears ");
+    document.write(numberOfOccurences + " times in the array.");
+</script>

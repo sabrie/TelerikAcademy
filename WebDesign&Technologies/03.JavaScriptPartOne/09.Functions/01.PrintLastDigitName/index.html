@@ -1,0 +1,17 @@
+﻿<script>
+    // Write a function that returns the last digit of given integer as an English word. 
+    // Examples: 512 -> "two", 1024 -> "four", 12309 -> "nine"
+
+    // Click Ctrl + F5 to see the result in browser
+
+    function sayDigitName(digit) {
+        var digits = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+        return digits[digit];
+    }
+    var num = 12;
+    var lastDigit = num % 10;
+
+    document.write("The last digit of number " + num + " is -> ");
+
+    document.write(sayDigitName(lastDigit));
+</script>

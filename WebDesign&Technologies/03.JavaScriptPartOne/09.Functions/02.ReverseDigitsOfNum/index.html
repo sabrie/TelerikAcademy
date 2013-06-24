@@ -1,0 +1,22 @@
+﻿<script>
+
+    // Write a function that reverses the digits of given decimal number. 
+    // Example: 256 -> 652
+
+    // Click Ctrl + F5 to see the result in browser
+
+    function PrintReversedDigits(num) {
+        var remainder;
+        do {
+            // take the last digit of a number and print it
+            remainder = num % 10;  // example: 123 % 10 = 3;
+            document.write(remainder);
+            num = parseInt(num / 10);
+        } while (num > 0);
+    }
+    var num = 256;
+    document.write("Number: " + num);
+    document.write("</br>");
+    document.write("Reversed: ");
+    PrintReversedDigits(num);
+</script>
