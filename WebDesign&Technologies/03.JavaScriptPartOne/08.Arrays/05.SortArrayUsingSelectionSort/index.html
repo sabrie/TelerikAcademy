@@ -1,0 +1,45 @@
+﻿<pre>
+<script>
+
+    /* Sorting an array means to arrange its elements in increasing order. 
+    Write a script to sort an array. Use the "selection sort" algorithm: 
+    Find the smallest element, move it at the first position, find the 
+    smallest from the rest, move it at the second position, etc.
+    Hint: Use a second array
+    */
+
+    // Click Ctrl + F5 to see the result in browser
+
+    var arr = [22, 12, 1, 3, 45, 8];        
+
+    // prints the unsorted array
+    document.write("Unsorted array:");
+    for (var count = 0; count < arr.length; count++)
+    {
+        document.write(" " + arr[count]);
+    }
+
+    // new line - if the script is in <pre></pre> tag
+    document.writeln();
+
+    // Selection Sort Algorithm
+    document.write("Sorted array (using Selection Sort): ");
+    
+    var min; // index of the smallest element
+
+    for (var i = 0; i < arr.length; i++) {
+        min = i;
+
+        for (var j = i + 1; j < arr.length; j++) {
+            if (arr[j] < arr[min]) {
+                min = j;
+            }
+        }
+        var exchangeValues = arr[i];
+        arr[i] = arr[min];
+        arr[min] = exchangeValues;
+
+        document.write(" " + arr[i]);
+    }
+</script>
+</pre>

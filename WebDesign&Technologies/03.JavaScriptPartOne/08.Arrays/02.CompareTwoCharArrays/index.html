@@ -1,0 +1,77 @@
+﻿<script>
+    // Write a script that compares two char arrays lexicographically (letter by letter).
+
+    // Click Ctrl + F5 to see the result in browser
+
+    var firstArr = ["p", "w", "s", "a"];
+    var secondArr = ["p", "e", "s"];
+    var isEqual = true;
+
+    // if the lengths of both arrays are equal then 
+    // we compare them element by element 
+    // (compare the elements of both arrays with the same indexes)
+    if (firstArr.length === secondArr.length) {
+        for (var i = 0; i < firstArr.length; i++)
+        {
+            // when we reach elements that are not equal
+            // we find the smaller or the bigger of the two elements 
+            if (firstArr[i].charCodeAt(0) < secondArr[i].charCodeAt(0)) {
+            
+                // if firstArr element is smaller than the secondArr element
+                // we print that the first array is before the second array
+                isEqual = false;
+                document.write("First array is before second array");
+                break;
+            } else if (firstArr[i].charCodeAt(0) > secondArr[i].charCodeAt(0)) {
+            
+                // if firstArr element is bigger than the seccondArr element
+                // we print that the second array is before the first array
+                isEqual = false;
+                document.write("Second array is before first array");
+                break;
+            }
+        }
+        if (isEqual) {
+            document.write("The two arrays are equal");
+        }
+    }
+    // if the lengths of both arrays are not equal then
+    // the two arrays are not equal
+    else if (firstArr.length != secondArr.length) {
+        if (firstArr.length < secondArr.length) {
+            for (var i = 0; i < firstArr.length; i++)
+            {
+                if (firstArr[i].charCodeAt(0) < secondArr[i].charCodeAt(0)) {
+
+                    isEqual = false;
+                    document.write("First array is before second array");
+                    break;
+                } else if (firstArr[i].charCodeAt(0) > secondArr[i].charCodeAt(0)) {
+                    isEqual = false;
+                    document.write("Second array is before first array");
+                    break;
+                }
+            }
+            if (isEqual) {
+            document.write("The first array is before the second array");
+            }
+        }
+
+        if (secondArr.length < firstArr.length) {
+            for (var i = 0; i < secondArr.length; i++) {
+                if (secondArr[i].charCodeAt(0) < firstArr[i].charCodeAt(0)) {
+                    isEqual = false;
+                    document.write("Second array is before first array");
+                    break;
+               } else if (secondArr[i].charCodeAt(0) > firstArr[i].charCodeAt(0)) {
+                   isEqual = false;
+                   document.write("First array is before second array");
+                   break;
+               }
+            }
+            if (isEqual) {
+                document.write("The second array is before the first array");
+            }
+        }
+    }
+</script>

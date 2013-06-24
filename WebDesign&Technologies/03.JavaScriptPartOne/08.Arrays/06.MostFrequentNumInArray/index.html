@@ -1,0 +1,45 @@
+﻿<script>
+    // Write a program that finds the most frequent number in an array. 
+    //Example:
+    //[4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3] -> 4 (5 times)
+
+
+    // Click Ctrl + F5 to see the result in browser
+
+
+    // create and initialize an array
+    var arr = [ 4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3 ]; // 4 (5 times)
+    //var arr = [ 4, 3, 1, 3, 1, 4, 2, 3, 3, 3, 3, 3, 3, 4, 4, 1, 3, 2, 4, 9, 3 ]; // 3 (10 times)
+
+    // print the array
+    document.write("Array:");
+    for (var i = 0; i < arr.length; i++)
+    {
+        document.write(" " + arr[i]);
+    }
+
+    document.write("</br>"); // new line
+
+    // sort the array
+    arr.sort();
+
+    var counter = 0; // counts the equal elements
+    var maxSequence = 1; // holds the max sequence of equal elements
+    var maxElement = 0; // holds the value of the most frequent element 
+
+    // find the maximal sequence of equal elements in the sorted array
+    for (var index = 0; index < arr.length - 1; index++) {
+        if (arr[index] == arr[index + 1]) {
+            counter++;
+        } else {
+            counter = 1;
+        }
+        if (counter > maxSequence) {
+            maxSequence = counter;
+            maxElement = arr[index];
+        }
+    }
+    // prints the result
+    document.write("The most frequent element: ");
+    document.write(maxElement + " (" + maxSequence + " times)");
+</script>
