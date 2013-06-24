@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SizeAndRotatedSize", "01.SizeAndRotatedSize\01.SizeAndRotatedSize.csproj", "{D77E6792-7A71-47E5-AEB9-10DE5FA3B6DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.PrintMinMaxAverage", "02.PrintMinMaxAverage\02.PrintMinMaxAverage.csproj", "{331D31EA-C7D8-4911-873C-65C85E0D129C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D77E6792-7A71-47E5-AEB9-10DE5FA3B6DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D77E6792-7A71-47E5-AEB9-10DE5FA3B6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D77E6792-7A71-47E5-AEB9-10DE5FA3B6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D77E6792-7A71-47E5-AEB9-10DE5FA3B6DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{331D31EA-C7D8-4911-873C-65C85E0D129C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{331D31EA-C7D8-4911-873C-65C85E0D129C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{331D31EA-C7D8-4911-873C-65C85E0D129C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{331D31EA-C7D8-4911-873C-65C85E0D129C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
