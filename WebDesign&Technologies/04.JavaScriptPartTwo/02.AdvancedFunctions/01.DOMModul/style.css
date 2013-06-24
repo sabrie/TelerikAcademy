@@ -1,0 +1,27 @@
+﻿body, p, div {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    height: 100%;
+}
+
+p {
+    padding: 10px;
+    margin: 10px;
+}
+
+    p.info {
+        width: 550px;
+        background-color: #dedede;
+        border-radius: 6px;
+    }
+
+div {
+    background: gray;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
