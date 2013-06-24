@@ -1,0 +1,30 @@
+﻿<script>
+
+    // Write a function that makes a deep copy of an object
+    // The function should work for both primitive and reference types
+
+
+    // create deep copy of object
+    function deepCopy(object) {
+        // if the object that we pass as parameter is not reference but primitive type - we just return it
+        if (typeof object !== "object") {
+            return object;
+        }
+        
+        // create an empty object
+        var copy = {};
+        var prop;
+        
+        for (prop in object) {
+            // copy all properties of the original object to the copy object
+            copy[prop] = deepCopy(object[prop]);
+        }
+  
+        return copy;
+    }
+
+    var obj = { x: { y: 1 }, z: 2 };
+
+    var objDeepCopy = deepCopy(obj);
+
+</script>

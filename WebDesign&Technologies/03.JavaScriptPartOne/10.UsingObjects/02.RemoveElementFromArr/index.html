@@ -1,0 +1,21 @@
+﻿<script>
+
+    // Write a function that removes all elements with a given value
+    // Attach it to the array class
+    // Read about prototype and how to attach methods
+
+    // Click Ctrl + F5 to see the result in browser
+ 
+    Array.prototype.remove = function (element) {
+        return this.filter(function (el) {
+            // returns only the elements (el) that are not equal to the (element) passed as parameter to the outer function
+            return el !== element; 
+        });
+    }
+
+    var arr = [1, 2, 3, 4, 5];
+    var removeNum = 3;
+    document.write("Array -> " + arr);
+    document.write("</br>");
+    document.write("Remove " + removeNum + " -> " + arr.remove(removeNum)); // removes 3
+</script>

@@ -1,0 +1,30 @@
+﻿<script>
+    // Write a function that checks if a given object contains a given property
+
+    // myObject.hasOwnProperty(myProperty) -> checks for properties that are on the object itself (not a part of its prototype chain)
+    // if ('y' in x) { // ...... }    ->  "in" operator checks for properties that are inherited as well.
+
+    function hasProperty(object, prop) {
+        return prop in object; // returns true if the specified property is in the specified object or false if it is not.
+    }
+
+    // another way to check if given property is in the given object
+    Object.prototype.ifHasProperty = function (propertyName) {
+        return propertyName in this;
+    }
+
+    //var object = {
+    //    length : 2,
+    //    height : 3,
+    //    color : green
+    //};
+
+    var object = {};
+    object.length = 2;
+    object.height = 2;
+    object.color = "green";
+            
+    document.write(hasProperty(object, "length")); // true
+    document.write("</br>");
+    document.write(object.ifHasProperty("color")); // true
+</script>

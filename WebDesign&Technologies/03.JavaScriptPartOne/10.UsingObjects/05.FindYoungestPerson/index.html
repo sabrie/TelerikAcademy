@@ -1,0 +1,26 @@
+﻿<script>
+    //Write a function that finds the youngest person in a given array of persons and prints his/hers full name
+    // Each person have properties firstname, lastname and age, as shown:
+
+
+    // Example:
+    // var persons = [
+    // {firstname : "Gosho", lastname: "Petrov", age: 32}, 
+    // {firstname : "Bay", lastname: "Ivan", age: 81},…];
+
+    // Click Ctrl + F5 to see the result in browser
+
+    var persons = [
+        { firstname: "Pesho", lastname: "Peshev", age: 81 },
+        { firstname: "Gosho", lastname: "Goshov", age: 10 },
+        { firstname: "Ivan", lastname: "Ivanov", age: 40 }
+    ];
+
+    
+    var youngest = persons.reduce(function (a, b) {
+        return a.age - b.age < 0 ? a : b;
+    });
+
+    document.write("Youngest person is: " + youngest.firstname + " " + youngest.lastname);
+
+</script>
