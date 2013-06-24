@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <div id="main-container">    	
+        <div id="calculator-icon">
+            <img src="images/calculator_icon.png" /> 
+            <span> Calculator </span>
+        </div>
+
+    <div id="menu-close">
+        <img src="images/minimize_btn_29x19.png" /> 
+        <img src="images/maximize_btn.png" />
+        <img src="images/close_btn.png"  />
+    </div>
+    
+    <div id="calculator">
+        <div id="nav">
+            <form action="#" method="post" >
+       	        <input class="view" type="button" value="View" />
+            </form>
+        </div>
+        <div id="input">
+        	<form action="#" method="post" >
+        		<input class="input" type="text" name="input" /> 
+            </form>
+        </div>
+        <div class="binary">
+            <form action="#" method="post" >
+                <table id="binary">
+                    <tr>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>0000</td>
+                    </tr>
+                    <tr>
+                        <td class="left" colspan="4">63</td>
+                        <td class="left" colspan="3">47</td>
+                        <td class="right" >32</td>
+                    </tr>
+                    <tr>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>1000</td>
+                        <td>0111</td>
+                        <td>0001</td>
+                        <td>1011</td>
+                        <td>1011</td>
+                        <td>0111</td>
+                    </tr>
+                    <tr>
+                        <td class="left" colspan="4">31</td>
+                        <td class="left" colspan="3">15</td>
+                        <td class="right">0</td>
+                    </tr>
+                </table>
+            </form>
+            
+            
+        </div>
+        <div id="numpad">
+            <form action="#" method="post" >
+                <table>
+                    <tr>
+                        <td class="border" id="numeral-system" colspan="2" rowspan="4">
+                            <input id="hex" type="radio" name="numeral-system" value="Hex" />
+                            <label for="hex">Hex</label> <br />
+                            <input id="dec" type="radio" name="numeral-system" value="dec" checked="checked" />
+                            <label for="dec">Dec</label> <br />
+                            <input id="oct" type="radio" name="numeral-system" value="oct" />
+                            <label for="oct">Oct</label> <br />
+                            <input id="bin" type="radio" name="numeral-system" value="bin" />
+                            <label for="bin">Bin</label> <br />
+                        </td>
+                        <td class="empty"><input type="button" /></td>
+                        <td><input type="button" value="Mod" /></td>
+                        <td><input type="button" value="A" /></td>
+                        <td><input type="button" value="MC" /></td>
+                        <td><input type="button" value="MR" /></td>
+                        <td><input type="button" value="MS" /></td>
+                        <td><input type="button" value="M+" /></td>
+                        <td><input type="button" value="M-" /></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="border">
+                            <input id="qword" type="radio" name="word" value="Qword" checked="checked" />
+                            <label for="qword">Qword</label> <br />
+                            <input id="dword" type="radio" name="word" value="Dword"  />
+                            <label for="dword">Dword</label> <br />
+                            <input id="word" type="radio" name="word" value="Word" />
+                            <label for="word">Word</label> <br />
+                            <input id="byte" type="radio" name="word" value="Byte" />
+                            <label for="byte">Byte</label> <br />
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
