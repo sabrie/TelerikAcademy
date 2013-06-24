@@ -1,0 +1,3 @@
+http://popaye.codeplex.com/ - TFS repository
+
+http://popaye.codeplex.com/documentation - Documentation in CodePlex
