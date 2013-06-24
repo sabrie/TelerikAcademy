@@ -1,0 +1,12 @@
+﻿<script>
+    /* Write an expression that checks for given integer if its third digit (right-to-left) is 7. E. g. 1732  true.*/
+
+    /*Click Ctrl + F5 to see the result in browser */
+    var integerNumber = 1732;
+    var divisionBy100 = parseInt(integerNumber / 100);
+    var remainder = divisionBy100 % 10;
+
+    document.write("The third digit of the number " + integerNumber + " is 7: ");
+
+    document.write(remainder === 7); // returns true or false
+</script>

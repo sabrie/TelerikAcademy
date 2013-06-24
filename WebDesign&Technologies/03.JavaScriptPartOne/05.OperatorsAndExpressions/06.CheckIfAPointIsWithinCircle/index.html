@@ -1,0 +1,18 @@
+﻿<script>
+    /* Write an expression that checks if given print (x,  y) is within a circle K(O, 5).*/
+
+    /*Click Ctrl + F5 to see the result in browser */
+    var x = 2.5;
+    var y = 8.4;
+    var r = 5;
+    var isWithin = Math.sqrt((x * x) + (y * y)) <= (r*r);
+
+    document.write("The point is ");
+
+    if (isWithin) {
+        document.write("within ");
+    } else {
+        document.write("NOT within ");
+    }
+    document.write("the circle K(0,5).");
+</script>

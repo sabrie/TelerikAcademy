@@ -1,0 +1,26 @@
+﻿<script>
+    /*Write an expression that checks for given point (x, y) if it is within the 
+circle K( (1,1), 3) and out of the rectangle R(top=1, left=-1, width=6, height=2).*/
+
+    /*Click Ctrl + F5 to see the result in browser */
+
+var x = 25;
+var y = 2;
+var r = 3;
+var isWithinCircle = (x-1)*(x-1) + (y-1)*(y-1) <= r*r;
+var isXInRectangle = (x >= -1) && (x <= 5);
+var isYInRectangle = (y >= -1) && (y <= 1);
+
+if (isWithinCircle) {
+	document.write("The point x = " + x + ", y = " + y + " is within the circle K((1,1),3)");
+
+	if (!isXInRectangle || !isYInRectangle) {
+		document.write(" and out of ");
+    } else {
+		document.write(" and within ");
+	}
+	document.write("the rectangle R(top=1, left=-1, width=6, height=2).");
+} else {
+  document.write("The point x = " + x + ", y = " + y + " is NOT within the circle K((1,1),3)");
+}
+</script>

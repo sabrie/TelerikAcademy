@@ -1,0 +1,24 @@
+﻿<script>
+    /*Write an expression that checks if given positive integer
+    number n (n <= 100) is prime. E.g. 37 is prime. */
+
+    /*Click Ctrl + F5 to see the result in browser */
+
+    var n = 37;
+    var divider = 2;
+    var maxDivider = Math.sqrt(n);
+    var prime = true;
+
+    if (n <= 100) {
+        while (prime && divider <= maxDivider) {
+            if (n % divider === 0) {
+                prime = false;
+            }
+            divider++;
+        }
+
+        document.write("The number " + n + " is prime: " + prime);
+    } else {
+        document.write("Number should be in the range 1 and 100.");
+    }
+</script>
