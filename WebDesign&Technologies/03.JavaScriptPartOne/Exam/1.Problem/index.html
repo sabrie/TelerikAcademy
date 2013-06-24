@@ -1,0 +1,458 @@
+﻿<script src="source.js"></script>
+<script>
+    console.log(Solve([
+        "8",
+        "1",
+        "6",
+        "-9",
+        "4",
+        "4",
+        "-2",
+        "10",
+        "-1"
+    ]));
+
+
+    console.log(Solve([
+        "6",
+        "1",
+        "3",
+        "-5",
+        "8",
+        "7",
+        "-6"
+    ]));
+
+    console.log(Solve([
+        "9",
+        "-9",
+        "-8",
+        "-8",
+        "-7",
+        "-6",
+        "-5",
+        "-1",
+        "-7",
+        "-6"
+    ]));
+
+
+
+
+
+    //console.log(Solve([
+    //    "1 2 3",
+    //    "2 3"
+    //]));
+
+    //console.log(Solve([
+    //    "1 2 3",
+    //    "2 3"
+    //]));
+
+    //console.log(Solve([
+    //    "1 2 3",
+    //    "2 3"
+    //]));
+
+</script>
+
+
+
+
+
+<!-- 
+    PARSE'VANE I SABIRANE NA POREDITSA OT CHISLA
+    ----------------------------------------------------------------
+-->
+
+<!--function Solve(args) {
+    var f = function (n1, n2) {
+        return n1 + n2
+    }
+
+    return args.map(function (row) {
+        return row.split(" ").map(function (number) {
+            return +number
+        }).reduce(f)
+    }).reduce(f)
+}
+    -->
+
+
+
+<!--
+    // PADLEFT
+    ----------------------------------------------------------------
+-->
+
+<!--function padLeft(obj, length) {
+    var str = obj.toString();
+
+    var missing = length - str.length;
+
+    var result = repeat(" ", missing) + str;
+    // result += str;
+
+    return result;
+}
+    -->
+
+
+<!--// CONCATENATING SEVERAL STRINGS 
+    ---------------------------------------------------------------
+    -->
+
+<!--function myConcat(separator) {
+  var result = "";
+ 
+  // iterate through non-separator arguments
+  for (var i = 1; i < arguments.length; i++) {
+    result += arguments[i] + separator;
+  }
+  
+  return result;
+}
+    
+myConcat("; ", "elephant", "giraffe", "lion", "cheetah");   // returns "elephant; giraffe; lion; cheetah; "
+    
+    -->
+
+<!--CREATE HTML LIST
+    ---------------------------------------------------------------
+
+function list(type) {
+  var result = "<" + type + "l>";
+ 
+  // iterate through non-type arguments
+  for (var i = 1; i < arguments.length; i++) {
+    result += "<li>" + arguments[i] + "</li>";
+  }
+  
+  result += "</" + type + "l>"; // end list
+ 
+  return result;
+}
+    
+    var listHTML = list("u", "One", "Two", "Three");   // <ul><li>One</li><li>Two</li><li>Three</li></ul>
+ 
+   -->
+
+
+
+
+<!--
+    // REPEAT - PRINT SOMTHING GIVEN TIMES
+    ---------------------------------------------------------------
+-->
+
+<!-- STRINGBUILDER
+
+    function repeat(letter, times) {
+    var result = "";
+    var i;
+
+    for (i = 0; i < times; i++) {
+        result += letter;
+    }
+
+    return result;
+}
+    -->
+
+
+
+
+<!--// RENAME PERSON
+    ---------------------------------------------------------------
+    -->
+
+<!--function renamePerson(personObj, fname, lname) {
+            // overloading - ako ne e zadadeno fname - da si ostane fname na personObj - t.e. da ne se promeniq imeto
+			personObj.firstname = fname || personObj.firstname;
+			personObj.lastname = lname || personObj.lastname;
+}
+    var person = {
+		firstname: "Doncho",
+		lastname: "Minkov",
+		toString: function () {
+			return this.firstname + " " + this.lastname;
+		}
+	}
+
+    renamePerson(person, "Stamat"); // Stamat Minkov    
+    
+    -->
+
+
+
+<!--// BUILD PERSON
+    ---------------------------------------------------------------
+
+function buildPerson(fname, lname) {
+
+    return {
+			fname: fname,
+			lname: lname,
+			toString: function getFullName() {
+				return this.fname + " " + this.lname;
+		    }
+	};
+}
+
+var minkov = buildPerson("Doncho", "Minkov");
+    
+    -->
+
+
+
+
+<!--// PRINT PROPERTIES OF OBJECT
+    ---------------------------------------------------------------
+
+function printStudent(student) {
+	jsConsole.writeLine("<strong>" + student.name + "</student>");
+	for (var i in marks) {
+		jsConsole.writeLine("<strong>" + marks[i].subject + "</strong>" + " : " + marks[i].score);
+	}
+	jsConsole.writeLine("--------------------------");
+}
+
+var marks = [
+	{ subject: "JavaScript", score: 5.50 },
+	{ subject: "OOP", score: 5.00 },
+	{ subject: "Slice and Dice", score: 6.00 },
+	{ subject: "Photoshop", score: 4.00 }];
+
+var student = { name: "Doncho Minkov", marks: marks };
+printStudent(student);
+marks[2].score = 5.50;
+printStudent(student);
+//logs 5.50 for Slice and Dice score	
+    -->
+
+
+<!--// JSON OBJECT
+    ---------------------------------------------------------------
+
+var person = {
+	firstname: "Doncho",
+	lastname: "Minkov",
+	toString: function () {
+		return this.firstname + " " + this.lastname;
+	}
+
+    console.log(person.toString()); // Doncho Minkov
+}
+    -->
+
+
+<!--// SPLIT WORDS
+    ---------------------------------------------------------------
+
+function getWords(text) {
+	var words = text.split(/[\s\.,-?!)(]/);   // splitvame po [space.,-!?()] - vrashta masiv ot dumi
+	for (var i = 0; i < words.length; i++) {
+        
+        // ako dumata e prazna - q iztrivame
+		if (words[i] == "") {
+            //
+			words.splice(i, 1);
+		}
+	}
+	return words;
+}
+    -->
+
+
+
+<!--// MASIVI ARRAYS
+    ==============================================================
+
+
+
+
+    // ARRAY FUNCTIONS
+    ================================================================
+
+// JOIN
+
+var arr = new Array(1, 2, 3, 4, 5);
+
+var joined = arr.join(",");  // vrashta string sas svarzanite elementi po dadeniq separator
+
+// REVERSE
+    ---------------------------------------------------------------
+
+array.reverse()
+Returns a new arrays with elements in reversed order
+
+// SPLICE
+    ---------------------------------------------------------------
+
+// array.splice(index, count, elements)
+// Adds and/or removes elements from an array
+
+var arr = [1,2,3,4,5]
+arr.splice(2,1,10)  // return as result the removed number - 3
+console.log(arr)   // [1, 2, 10, 4, 5]
+
+var array = [1,2,3,4,5,6]
+console.log(array.splice(2, 3, 11, 12, 13))  // return as result the removed numbers - 3, 4, 5
+console.log(array) // [1, 2, 11, 12, 13, 6]
+
+
+var array2 = [1, 2, 3, 4, 5]
+console.log(array2.splice(1, 3, 15))  // vrashta iztritite elementi - 2, 3, 4
+console.log(array2)       // [1, 15, 5]   -> mahnali sme tri elementa, no sme dobavili samo edin
+
+array2.splice(1, 0, 15)   // ne iztriva elementi - samo dobavia
+array2.splice(1, 2)  //  samo iztriva elementi - 2 s nachalo index 1
+array2.splice(-1, 1)   // index -1 -> oznachava posledniq element => shte mahne posledniq element
+array2.splice(-2, 1)   // index -2 -> oznachava predposledniq element => shte mahne predposledniq element
+array2.splice(-array2.length, 1)   // index -array2.length -> oznachava parviq element => shte mahne parviq element
+
+
+// CONCATENATE
+    ---------------------------------------------------------------
+
+// array.concat(elements)
+// Inserts the elements at the end of the array and returns a new array
+
+var arr = [1, 2, 3]
+var concatenated = arr.concat(4, 5, 6)
+console.log(concatenated) // [1, 2, 3, 4, 5, 6]
+
+
+// FILTER - podobno na "where"
+    ---------------------------------------------------------------
+
+// array.filter(condition)
+// Returns a new array with the elements that satisfy condition
+
+// FOREACH
+    ---------------------------------------------------------------
+
+// array.forEach(function(item){})      -> ne e preporachitelno da go izpolzvame
+// Iterates through the array and executes the function for each item
+
+
+// INDEXOF
+    ---------------------------------------------------------------
+// ne raboti v po-starite browseri i mobilnite telefoni - za da raboti, triabva da dobavim sledniq kod
+// pravim go v otdelen fail i go importvame
+
+(function () {
+    if (!Array.prototype.indexOf) {
+        Array.prototype.indexOf = function (o, s) {
+            for (var i = (s || 0), n = this.length; i < n; i++) {
+                if (this[i] === o) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+    }
+    if (!Array.prototype.lastIndexOf) {
+        Array.prototype.lastIndexOf = function (o, e) {
+            for (var i = (e || this.length) ; i >= 0; i--) {
+                if (this[i] === o) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+    }
+})();
+    
+    -->
+
+
+<!--METHODS FOR ARRAY MANIPULATION
+=======================================================
+
+array.push(element)
+-----------------------------
+Inserts a new element at the tail of the array
+
+array.pop()
+------------------------
+Removes the element at the tail
+Returns the removed element
+    
+array.unshift(element)
+---------------------------
+Inserts a new element at the head of the array
+
+array.shift()
+--------------------------
+Removes the element at the head of the array
+Returns the removed element
+
+    -->
+
+
+<!--
+
+    SORT NUMBER ARRAY
+    
+    
+    var persons = [
+        { firstname: "Pesho", lastname: "Peshev", age: 81 },
+        { firstname: "Gosho", lastname: "Goshov", age: 10 },
+        { firstname: "Ivan", lastname: "Ivanov", age: 40 }
+    ];
+
+    
+    var youngest = persons.reduce(function (a, b) {
+        return a.age - b.age < 0 ? a : b;
+    });
+
+    document.write("Youngest person is: " + youngest.firstname + " " + youngest.lastname);
+   
+     -->
+
+
+
+
+<!--
+    // STRINGS
+
+ // sazdavame masiv [], koito palnim sas izbroenite stringove, razdeleni sas separator " "
+    
+    console.log([].push(str1, str2).join(" "));
+    ---------------------------------------------------------------
+
+    var newString = str1.concat(str2); // vrashta nov string s koncateniranite dvata stringa
+    -----------------------------------------------------------------------------------------
+
+    str.contains(substring); 
+    --------------------------------
+    raboti samo v Firefox - vrashta true ili false
+
+    str.startsWith(substr));  i    str.endsWith(substr)
+    --------------------------------
+    // dali zapochva s dadeniq substring - ne raboti vav vsichki browser'i
+
+    string.substr(start, length)
+    -------------------------------------
+    Returns a substring, starting from start and counting length characters - length is optional
+
+    string.substring(start, end)
+    ------------------------------------
+    Returns a substring, starting from start and ending at end
+
+    string.valueOf()
+    ------------------------------------
+    Returns the primitive value of the object string
+    t.e. ako sme si sazdali referenten object s "new String();" - to mozhe da vzemem primitivnata stoinost s ValueOf
+
+    str1.trim();
+    ------------------------------------
+    // premahva whitespaces v nachaloto i kraya na stringa
+
+    str1.trimLeft();
+    ---------------------------------
+    str1.trimRight();
+    ----------------------------------
+    -->
