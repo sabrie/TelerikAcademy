@@ -1,0 +1,10 @@
+﻿850; Acer123 Laptop
+920; HP234 Laptop
+1200; HP345 Tablet
+980; HP23 Laptop
+740; HP67 Notebook
+630; Samsung56 Notebook
+680; Samsung78 Laptop
+820; Samsung79 Notebook
+750; Lenovo89 Laptop
+930; Lenovo28 Tablet
