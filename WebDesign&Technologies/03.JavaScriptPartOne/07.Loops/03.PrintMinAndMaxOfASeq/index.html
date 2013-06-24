@@ -1,0 +1,33 @@
+﻿<script>
+    /* Write a script that finds the max and min number from a sequence of numbers */
+
+    // Click Ctrl + F5 to see the result in browser
+
+    var numberSequence = [1, 2, 3, 4, 5];
+    var minNum;
+    var maxNum;
+
+    if (numberSequence.length === 0) {
+        document.write("Please enter a number greater than 0: ");
+    } else if (numberSequence.length === 1)
+    {
+        document.write("Min Number = Max Number = " + numberSequence[0]);
+    } else {
+        for (var i = 1; i < numberSequence.length; i++)
+        {
+            minNum = numberSequence[0];
+            maxNum = numberSequence[0];
+            if (minNum < numberSequence[i]) {
+                minNum = minNum;
+            } else {
+                minNum = numberSequence[i];
+            }
+            if (maxNum > numberSequence[i]) {
+                maxNum = maxNum;
+            } else {
+                maxNum = numberSequence[i];
+            }
+        }
+        document.write("Min Number = " + minNum + ", Max Number = " + maxNum);
+    }
+</script>

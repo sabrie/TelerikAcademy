@@ -1,0 +1,52 @@
+﻿<script>
+    /* Write a script that finds the lexicographically smallest and largest 
+     property in document, window and navigator objects */
+
+    // Click Ctrl + F5 to see the result in browser
+
+    // we create a function that takes as parameter an object and iterates over object properties
+    function findLexicogrSmallestProperty(object) {
+        // we declare a variable named "smallest" and set the lexicographically biggest letter to it
+        var smallest = "z";
+        for (property in object) {
+            // than we transform all letters of the property to lower case so that we workarround case sensibility 
+            // and compare with the value of var "smallest" (which is also lower case)
+            if (property.toLowerCase() < smallest) {
+                smallest = property;
+            }            
+        }
+        document.write("Lexicographically smallest element in " + object + " is -> " + smallest);
+    }
+
+    // we create a function that takes as parameter an object and iterates over object properties
+    function findLexicogrBiggestProperty(object) {
+        // we declare a variable named "biggest" and set the lexicographically smallest letter to it
+        var biggest = "a";
+        for (property in object) {
+            // than we transform all letters of the property to lower case so that we workarround case sensibility
+            //and compare with the value of var "biggest" (which is also lower case)
+            if (property.toLowerCase() > biggest) {
+                biggest = property;
+            }
+        }
+        document.write("Lexicographically biggest element in " + object + " is -> " + biggest);
+    }
+
+    // find the lexicographically smallest property in object, window, document
+    findLexicogrSmallestProperty(document);
+    document.write("</br>"); // new line
+    findLexicogrSmallestProperty(window);
+    document.write("</br>");
+    findLexicogrSmallestProperty(navigator);
+    document.write("</br>");
+    document.write("</br>");
+
+
+    // find the lexicographically biggest property in object, window, document
+    findLexicogrBiggestProperty(document);
+    document.write("</br>"); // new line
+    findLexicogrBiggestProperty(window);
+    document.write("</br>");
+    findLexicogrBiggestProperty(navigator);
+    document.write("</br>");
+</script>

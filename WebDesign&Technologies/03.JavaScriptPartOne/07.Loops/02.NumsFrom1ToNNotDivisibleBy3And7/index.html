@@ -1,0 +1,19 @@
+﻿<script>
+    /* Write a script that prints all the numbers from 1 to N, that are not divisible by 3 and 7 at the same time */
+
+    // Click Ctrl + F5 to see the result in browser
+    var n = 33;
+        
+    if (n > 0) {
+        document.write("The numbers from 1 to " + n);
+        document.write(" which are not divisible by 7 and 3 at the same time are: ");
+        for (var i = 1; i <= n; i++)
+        {
+            if (i % (3*7) != 0) {
+                document.write(" " + i);
+            }
+        }
+    } else {
+        document.write("Error! Please enter a positive number greater than 1.");
+    }
+</script>
