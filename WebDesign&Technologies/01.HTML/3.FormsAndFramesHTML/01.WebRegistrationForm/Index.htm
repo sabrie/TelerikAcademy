@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Registration form</title>
+</head>
+<body>
+    <form name="registration" id="registration" method="post" action="#">
+        <table width="550px" align="center" border="1" cellspacing="0" cellpadding="10">
+
+<!-- Table Head BEGIN -->   
+            <thead>
+                <tr>
+                    <th align="center" colspan="2" bgcolor="#d1ede1">Registration form</th>
+                </tr>
+            </thead>
+<!-- Table Head END -->
+
+<!-- Table Foot BEGIN -->   
+            <tfoot>
+                <tr>
+                    <td align="center" colspan="2" bgcolor="#d1ede1"> 
+                        <input type="submit" name="submit" value="Submit" />
+	        	        <input type="reset" name="reset" value="Clear This Form" />
+                    </td>
+                </tr>
+            </tfoot>
+<!-- Table Foot END -->
+
+<!-- Table Body BEGIN -->
+	        <tbody>
+	        	<tr>
+	        		<td width="30%" align="right"><label for="lastname">Last Name</label></td>
+	        		<td width="70%"><input type="text" name="lastname" id="lastname" size="50" /></td>
+	        	</tr>
+	        	<tr>
+	        		<td align="right"><label for="firstname">First Name</label></td>
+	        		<td><input type="text" name="firstname" id="firstname" size="50" /></td>
+	        	</tr>
+	        	<tr>
+	        		<td align="right"><label for="address">Address</label></td>
+	        		<td><textarea name="address" id="address" cols="40" rows="5"></textarea></td>
+	        	</tr>
+	        	<tr>
+	        		<td align="right"><label for="city">City</label></td>
+	        		<td>
+	        			<table border="0" cellspacing="0" cellpadding="10">
+	        				<tr>
+	        					<td><input type="text" name="city" id="city" /></td>
+	        					<td><label for="state">State</label></td>
+	        					<td><input type="text" name="state" id="state" size="5" /></td>
+	        				</tr>
+	        			</table>
+	        		</td>
+	        	</tr>
+	        	<tr>
+	        		<td align="right"><label for="postalcode">Zip/ Postal Code</label></td>
+	        		<td><input type="text" name="postalcode" id="postalcode" size="5" /></td>
+	        	</tr>
+	        	<tr>
+	        		<td align="right">Country</td>
+	        		<td>
+	        			<select name="country" style="width:200px;">
+	        				<option value="Value 1" selected="selected">Bulgaria</option>
+	        				<option value="Value 2">Turkey</option>
+	        				<option value="Value 3">Greece</option>
+	        				<option value="Value 4">France</option>
+	        				<option value="Value 5">Other</option>
+	        			</select>
+	        		</td>
+	        	</tr>
+	        	<tr>
+	        		<td align="right"><label for="phone">Phone (country code, area code, number)</label></td>
+	        		
+                <!-- Nested table Begin-->
+                    <td>
+              			<table>
+	        				<tr>
+	        					<td><span>( + </span><input type="tel" id="phone" size="5" /><span> )</span></td>
+	        					<td><input type="tel" size="5" /></td>
+	        					<td><span> - </span><input type="tel" size="15" /></td>
+	        				</tr>
+	        			</table>
+	        		</td>
+                <!-- Nested table End-->
+
+	        	</tr>
+	        	<tr>
+	        		<td align="right"><label for="email">E-mail</label></td>
+	        		<td><input type="email" id="email" size="50" /></td>
+	        	</tr>
+	        	<tr>
+	        		<td align="right">Birthday</td>
+	        		<td>
+
+                    <!-- Nested table Begin-->
+	        			<table>
+	        				<tr>
+	        					<td><label for="month">Month</label><input type="text" id="month" size="2"/></td>
+	        					<td><label for="day">Day</label><input type="text" id="day" size="2" /></td>
+	        					<td><label for="year">Year(4 digit)</label><input type="text" id="year" size="4" /></td>
+	        				</tr>
+	        			</table>
+                    <!-- Nested table End-->
+
+	        		</td>
+	        	</tr>
+                <tr>
+                    <td align="right">Gender</td>
+                    <td>
+                        <select name="gender">
+	        				<option value="Value 1" selected="selected">Male</option>
+	        				<option value="Value 2">Female</option>
+	        			</select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">Starting date</td>
+                    <td>
+                        <input type="radio" name="startdate" id="spring" value="spring" />
+	        	        <label for="spring">Spring 2006</label>
+                        <input type="radio" name="startdate" id="summer" value="summer" />
+	        	        <label for="summer">Summer 2006</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="com">Comments/ Questions</label></td>
+                    <td><textarea name="comments-questions" id="com" cols="40" rows="5"></textarea></td>
+                </tr>
+            </tbody>
+<!-- Table Body END -->
+        </table>
+    </form>
+</body>
+</html>
