@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstarction", "Abstarction\Abstarction.csproj", "{6CCB1EE6-EA24-465B-AA31-F22CF8BDE23A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CohesionAndCoupling", "CohesionAndCoupling\CohesionAndCoupling.csproj", "{73E9B982-D697-4987-82C2-FD617B8FE835}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceAndPolymorphism", "InheritanceAndPolymorphism\InheritanceAndPolymorphism.csproj", "{AA402177-C2E5-40F0-9F00-FB51F5A7A5C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CCB1EE6-EA24-465B-AA31-F22CF8BDE23A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CCB1EE6-EA24-465B-AA31-F22CF8BDE23A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CCB1EE6-EA24-465B-AA31-F22CF8BDE23A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CCB1EE6-EA24-465B-AA31-F22CF8BDE23A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73E9B982-D697-4987-82C2-FD617B8FE835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73E9B982-D697-4987-82C2-FD617B8FE835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73E9B982-D697-4987-82C2-FD617B8FE835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73E9B982-D697-4987-82C2-FD617B8FE835}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA402177-C2E5-40F0-9F00-FB51F5A7A5C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA402177-C2E5-40F0-9F00-FB51F5A7A5C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA402177-C2E5-40F0-9F00-FB51F5A7A5C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA402177-C2E5-40F0-9F00-FB51F5A7A5C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
