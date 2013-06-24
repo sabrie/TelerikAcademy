@@ -1,0 +1,10 @@
+Task Description
+-------------------
+
+Upload anonymously a project to a project hosting site (GitHub, Google Code, etc.) and provide a public link to the project. The project can be from your homework.
+
+
+
+Here is the public link to my anonymous project:
+
+https://gist.github.com/anonymous/e2a7d9cab34973709087
