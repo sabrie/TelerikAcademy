@@ -1,0 +1,22 @@
+﻿<script>
+
+    /* Write a JavaScript function that replaces in a HTML document 
+    given as string all the tags <a href="…">…</a> with corresponding tags [URL=…]…/URL].
+    */
+
+    // Click Ctrl + F5 to see the result in browser
+
+    var text = '<p>Please visit <a href="http://academy.telerik.com">our site</a> ' + 
+        'to choose a training course. Also visit <a href="www.devbg.org">our forum</a> to discuss the courses.</p>';
+
+    var replaced = text.replace(/<a href="(.*?)">/g, "[URL=$1]");
+    replaced = replaced.replace(/<\/a>/g, "[/URL]");
+
+    document.write(replaced);
+
+
+    // you may also see the result in browser's Console - 
+    // click F12 in browser and then choose "Console" from the menu (Chrome) 
+    console.log("Orginal TEXT -> " + text);
+    console.log("RESULT -> " + replaced);
+</script>

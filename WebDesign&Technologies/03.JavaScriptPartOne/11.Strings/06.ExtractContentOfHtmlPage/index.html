@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script>
+        /* Write a function that extracts the content of a html page given as text. 
+        The function should return anything that is in a tag, without the tags:        
+        Example:
+        <html><head><title>Sample site</title></head><body><div>text<div>more text</div>and more...</div>in body</body></html>
+        Result:
+        Sample sitetextmore textand more...in body        
+        */
+
+        // Click Ctrl + F5 to see the result in browser
+
+        var text = "<html><head><title>Sample site</title></head><body><div>text<div>more text</div>and more...</div>in body</body></html>";
+
+        // we replace with empty spaces or actually delete everything which matches the pattern -> /<(.*?)>/
+        // which means everything that starts with "<", contains zero or more characters except new line and ends with ">"
+        var parsedText = text.replace(/<(.*?)>/g, "");
+
+        document.write(parsedText); // Sample sitetextmore textand more...in body
+    </script>
+
+</body>
+</html>

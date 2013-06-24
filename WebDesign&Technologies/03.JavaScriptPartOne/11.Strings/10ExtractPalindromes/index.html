@@ -1,0 +1,38 @@
+﻿<script>
+
+    // Write a program that extracts from a given text all palindromes, e.g. "ABBA", "lamal", "exe".
+
+    // Click Ctrl + F5 to see the result in browser
+
+    function isPalindrome(word) {
+        if (!word.length)
+            return false;
+
+        for (var i = 0; i < parseInt(word.length / 2) ; i++) {
+            // compare letters of the word
+            // starting from comparing the first with the last letter until we reach the middle
+            if (word[i] !== word[word.length - 1 - i]) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    var text = "Static void Main() ABBA, using System lamal, exe.";
+
+    var words = text.split(/\W/g); // extracts the words from the text by non-word characters "\W"
+    
+    document.write("TEXT - > " + text);
+    document.write("</br>");
+
+    document.write("PALINDROMES -> ");
+
+    for (var i = 0; i < words.length; i++) {
+
+        if (isPalindrome(words[i])) {
+
+            document.write(" " + words[i]);
+        }
+    }
+</script>

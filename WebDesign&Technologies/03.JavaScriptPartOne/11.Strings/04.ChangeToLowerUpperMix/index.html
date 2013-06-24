@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        /* You are given a text. Write a function that changes the text in all regions:
+                <upcase>text</upcase> to uppercase.
+                <lowcase>text</lowcase> to lowercase
+                <mixcase>text</mixcase> to mix casing(random)
+        */
+
+        // Click Ctrl + F5 and then F12 to see the result on the browser's Console (Chrome).
+
+        function toMixCase(text) {
+            var result = "";
+
+            for (var i = 0; i < text.length; i++) {
+                var random = Math.round(Math.random());
+
+                if (random) {
+                    result += text[i].toLowerCase();
+                }
+                else {
+                    result += text[i].toUpperCase();
+                }
+            }
+
+            return result;
+        }
+
+        var text = "We are <mixcase>living</mixcase> in a <upcase>yellow submarine</upcase>. We <mixcase>don't</mixcase> have <lowcase>ANYTHING</lowcase> else.";
+        
+        console.log("TEXT - > " + text);
+
+
+        result = text.replace(/<upcase>(.*?)<\/upcase>/g, function (match, g1) {
+            return g1.toUpperCase();
+        });
+
+        result = result.replace(/<lowcase>(.*?)<\/lowcase>/g, function (match, g1) {
+            return g1.toLowerCase();
+        });
+
+        result = result.replace(/<mixcase>(.*?)<\/mixcase>/g, function (match, g1) {
+            return toMixCase(g1);
+        });
+
+        console.log("RESULT -> " + result);
+
+
+
+        // ANOTHER WAY  - WITHOUT A RegExp
+
+        //var closeTagIndex;
+        //var result;
+
+        //for (var i = 0; i < text.length; i++) {
+        //    if (text.substr(i, "<upcase>".length) === "<upcase>") {
+        //        closeTagIndex = text.indexOf("</upcase>", i);
+        //        result = text.substring(i + "<upcase>".length, closeTagIndex).toUpperCase();
+        //        text = text.replace(text.substring(i, closeTagIndex + "<upcase>".length + 1), result);
+        //    }
+
+        //    if (text.substr(i, "<lowcase>".length) === "<lowcase>") {
+        //        closeTagIndex = text.indexOf("</lowcase>", i);
+        //        result = text.substring(i + "<lowcase>".length, closeTagIndex).toLowerCase();
+        //        text = text.replace(text.substring(i, closeTagIndex + "<lowcase>".length + 1), result);
+        //    }
+
+        //    if (text.substr(i, "<mixcase>".length) === "<mixcase>") {
+        //        closeTagIndex = text.indexOf("</mixcase>", i);
+        //        result = toMixCase(text.substring(i + "<mixcase>".length, closeTagIndex));
+        //        text = text.replace(text.substring(i, closeTagIndex + "<mixcase>".length + 1), result);
+        //    }
+        //}
+        
+        //var text = "We are living in a <upcase>yellow submarine</upcase>. We don't have <upcase>anything</upcase> else.";
+
+        //// find the index of first ocurrence of ">". 
+        //// After ">" is the beginning of the word that we have to change to upper
+        //var startIndex = text.IndexOf(">");
+        //// find the index of first ocurrence of "<" after first ocurrence of ">"
+        //// before this "<" is the end of the word that we have to change to upper
+        //var endIndex = text.IndexOf("<", startIndex + 1);
+
+        //while (startIndex != -1)
+        //{
+        //    var lengthInclTag = (endIndex + 8) - (startIndex - 7) + 1;
+        //    var lengthWithinTag = (endIndex - startIndex) - 1;
+
+        //    var changeThis = text.substr(startIndex - 7, lengthInclTag);
+        //    var changeToUpper = text.substr(startIndex + 1, lengthWithinTag).toUpperCase();
+
+        //    text = text.replace(changeThis, changeToUpper);
+
+        //    startIndex = text.indexOf(">");
+        //    endIndex = text.indexOf("<", startIndex + 1);
+        //}        
+        //document.write(text);
+
+        
+    </script>
+</body>
+</html>

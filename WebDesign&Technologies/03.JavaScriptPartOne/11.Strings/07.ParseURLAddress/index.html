@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        /* Write a script that parses an URL address given in the format:
+                [protocol]://[server]/[resource]
+		and extracts from it the [protocol], [server] and [resource] elements. 
+        Return the elements in a JSON object.
+        
+        For example from the URL http://www.devbg.org/forum/index.php the following information should be extracted:
+        
+        {protocol: "http", 
+        server: "www.devbg.org", 
+        resource: "/forum/index.php"}
+        */
+        
+        // Click Ctrl + F5 to see the result in browser
+
+        var urlAddress = "http://www.devbg.org/forum/index.php";
+
+        var result = urlAddress.match(/(.*?):\/\/(.*?)\/(.*)/g);
+
+        document.write("{ protocol: " + RegExp.$1);
+        document.write("</br>");
+        document.write("server: " + RegExp.$2);
+        document.write("</br>");
+        document.write("resources: " + RegExp.$3 + " }");
+
+
+
+        // Another way to extract the url address - without regular RegExp
+
+        //function printParsedURLAddress(urlAddress) {
+
+        //    var colon = urlAddress.indexOf(':');
+
+        //    // prints the protocol starting from [0] until ":" is reached 
+        //    var protocol = urlAddress.substring(0, colon);
+        //    document.write("{ protocol: " + "\"" + protocol + "\",");
+        //    document.write("</br>");
+
+        //    // index of first occurence of slash symbol after "://" - or the slash after the end of server name
+        //    var indexServerEndSlash = urlAddress.indexOf('/', colon + 3);
+        //    var server = urlAddress.substring(colon + 3, indexServerEndSlash);
+        //    document.write("server: " + "\"" + server + "\",");
+        //    document.write("</br>");
+
+        //    // print the substring of the url starting from the slash after "://"
+        //    var resources = urlAddress.substring(indexServerEndSlash);
+        //    document.write("resource: " + "\"" + resources + "\" }");
+        //}
+
+        //var urlAddress = "http://www.devbg.org/forum/index.php";
+
+        //printParsedURLAddress(urlAddress);
+
+    </script>
+
+</body>
+</html>

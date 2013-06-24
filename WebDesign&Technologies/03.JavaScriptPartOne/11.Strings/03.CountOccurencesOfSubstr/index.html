@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        // Write a JavaScript function that finds how many times a substring 
+        // is contained in a given text (perform case insensitive search).
+
+        // Click Ctrl + F5 to see the result in browser
+
+        function countOccurencesOf(text, substring) {
+            return text.match(new RegExp(substring, "gi")).length;            
+        }
+
+        var text = "We are living in an yellow submarine. We don't have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days.";
+        var substring = "in";
+
+        var substrCountResult = countOccurencesOf(text, substring);
+
+        document.write("The substring \"" + substring + "\" is contained -> " + substrCountResult + " times."); // 9
+
+        
+        // Another way to count the occurences of a substring - without using RegExp
+
+        //function countOccurencesOf(text, substring) {
+        //    var i;
+        //    var counter = 0;
+        //    for (i = 0; i < text.length - 1; i++) {
+        //        if (substring === text.substr(i, substring.length).toLowerCase()) {
+        //            counter++;
+        //        }
+        //    }
+        //    return counter;
+        //}
+
+    </script>
+
+</body>
+</html>

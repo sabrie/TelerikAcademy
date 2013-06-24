@@ -1,0 +1,18 @@
+﻿<script>
+    // Write a function that formats a string using placeholders:
+    // Example:
+    // var str = stringFormat("Hello {0}!","Peter");
+    // Result -> "Hello Peter!";
+
+    // Click Ctrl + F5 to see the result in browser
+
+function stringFormat(text) {
+    var selfArguments = arguments;
+
+    return text.replace(/{(\d+)}/g, function (match, g1) {
+        return selfArguments[+g1 + 1]; // +g1 is the same as parseInt(g1) :-)
+    });
+}
+
+document.write(stringFormat("Hello {0}!", "Peter"));  // Hello Peter!
+</script>
