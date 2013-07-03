@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Combine Google+ and YouTube Apps</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript">
+        (function () {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/client:plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+</head>
+<body>
+    <div id="main-container">
+<!-- GooglePlus sign in button Begin -->
+        <div id="google-plus-btn">
+            <span id="signinButton">
+                <span
+                    class="g-signin"
+                    data-callback="signinCallback"
+                    data-clientid="210481855731.apps.googleusercontent.com"
+                    data-cookiepolicy="single_host_origin"
+                    data-requestvisibleactions="http://schemas.google.com/AddActivity"
+                    data-scope="https://www.googleapis.com/auth/plus.login"></span>
+            </span>
+        </div>
+<!-- GooglePlus sign in button End -->
+
+<!-- YouTube Player Begin -->
+        <div id="youtube-main" style="display: none">
+            <div id="player"></div>
+            <br />
+            <span>ID: </span><input type="text" id="load-video" value="116_uIB2DP4"/>
+            <button id="single-video">Load video</button>
+            <button id="pause">Pause video</button>
+            <button id="play">Play video</button>
+            <button id="mute">Mute video</button>
+            <button id="unmute">Unmute video</button>
+            <br />
+            <span>Playlist: </span><textarea id="playlist">GeL3XkhPyTM,116_uIB2DP4,7A5_1J1vTY8</textarea>
+            <button id="load-playlist">Load playlist</button>
+            <button id="previous">Previous</button>
+            <button id="next">Next</button>
+            <script src="youtube-player.js"></script>
+        </div>
+    </div>
+<!-- YouTube Player End -->
+
+<!-- GooglePlus sign in Begin -->
+    <script>
+        function signinCallback(authResult) {
+            if (authResult['access_token']) {
+                // Successfully authorized
+                // Hide the sign-in button now that the user is authorized, for example:
+                document.getElementById('signinButton').setAttribute('style', 'display: none');
+                document.getElementById('youtube-main').setAttribute('style', 'display: block');
+
+                console.log("Google+ sign in succesful!");
+            } else if (authResult['error']) {
+                console.log('Google+ access denied!');
+                // There was an error.
+                // Possible error codes:
+                //   "access_denied" - User denied access to your app
+                //   "immediate_failed" - Could not automatically log in the user
+                // console.log('There was an error: ' + authResult['error']);
+            }
+        }
+    </script>
+<!-- GooglePlus sign in End -->
+
+<!-- Share on GooglePlus Begin -->
+    <script src="https://apis.google.com/js/plusone.js"></script>
+    <g:plus action="share" href="https://telerikacademy.com" id="share-tag" style="display: none"></g:plus>
+    <script type="text/javascript"> //put this after the last share tag
+        (function () {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+    <script>
+        var shareTag = document.getElementById('share-tag');
+        shareTag.setAttribute('href', 'https://telerikacademy.com');
+    </script>
+<!-- Share on GooglePlus End -->
+</body>
+</html>

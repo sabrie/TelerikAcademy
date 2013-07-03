@@ -1,0 +1,20 @@
+﻿body{
+     background-color: #dedede;
+     color: #a70606;
+ }
+
+ #main-container{
+     text-align: center;
+ }
+
+ #important{
+     color: white;
+     font-weight: bold;
+     font-size: 18px;
+
+ }
+
+ #logout{
+     background-color: #e8ebf8;
+     color: darkblue;
+ }

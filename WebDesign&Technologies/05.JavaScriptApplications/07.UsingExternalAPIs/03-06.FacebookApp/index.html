@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Facebook login demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.0.2.js"></script>
+</head>
+<body>
+    <div id="main-container">
+        <div id="fb-root"></div>
+        <fb:login-button show-faces="true" width="200" max-rows="1" id="log" ></fb:login-button>
+
+        <div id="important">Please, if you do not see some of your personal information allow pop-up's or Refresh the page</div>
+        <div id="fbLogout">
+            <button id="logout">Log Out</button>
+        </div>
+        <br />
+        <div id="profile-info"></div>
+        <div id="fbSend" class="fb-send" data-href="http://localhost:62486/index.html" data-font="arial"></div>
+        <div id="friends-holder"></div>
+    </div>
+
+    <script src="Scripts/facebook.js"></script>
+</body>
+</html>
