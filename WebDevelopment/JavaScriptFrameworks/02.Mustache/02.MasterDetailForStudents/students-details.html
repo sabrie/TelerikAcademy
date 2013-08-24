@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="scripts/libs/class.js"></script>
+    <script src="scripts/libs/jquery-2.0.3.js"></script>
+    <script src="scripts/libs/mustache.js"></script>
+    <script src="scripts/libs/http-requester.js"></script>
+    <script src="scripts/app/table-view.js"></script>
+
+    <style>
+        td {
+            vertical-align: top;
+            padding: 15px;
+        }
+
+        .student-marks {
+            display: none;
+        }
+        
+        div#task-description {
+            padding: 10px;
+            background-color: #dedede;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .bold{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="task-description">
+        <h3>Task 2</h3>
+        <p>
+            Create a web services that returns a list of students
+            Students have first and last name, grade, age and list of marks <br />
+            Marks have subject and score - <span class="bold">(see the Students.Services project)</span>
+            <br />
+            <br />
+            Create a Master-detail for the students and their marks
+            Create a template for rendering students
+            Create a template for rendering marks <br />
+            When student is clicked, their marks must be rendered in another HTML element
+            <br />
+        </p>
+    </div>
+    <p>
+        <span class="bold">1. First start the Services (Students.Services project) to be able to load the data</span>
+        <br />
+        <span class="bold">2. Then click on each student to see their marks (marks will be rendered in another HTML element)</span>
+    </p>
+    
+    <!-- Students template -->
+    <script type="x-mustache-template" id="student-template">
+        <div id="{{id}}" class="student">
+			<strong>{{firstName}} {{lastName}}</strong> <br />
+            <strong>Grade: {{grade}}</strong> <br />
+            <strong>Age: {{age}}</strong> <br />
+        </div>	
+    </script>
+
+    <!-- Marks template -->
+    <script type="x-mustache-template" id="marks-template">
+        <strong>{{firstName}} {{lastName}}'s marks: </strong>
+		<ul class="marks">
+			{{#marks}} 
+				<li calss="mark">
+					{{subject}}: <strong>{{score}}</strong>							
+				</li>
+            {{/marks}}
+            {{^marks}}	   
+                <li class="mark">
+                    This student has no marks, yet	  						
+                </li>
+            {{/marks}}
+        </ul>	
+    </script>
+
+    <!--Students' details will be rendered here-->
+    <div id="students"> </div>
+    <!--Clicked student's makrs will be rendered here-->
+    <div id="marks"> </div>
+
+    <script>
+        var students;
+
+        // Gets students data
+        httpRequester.getJSON(
+            url = "http://localhost:56246/api/students",
+            success = function (data) {
+                students = data;
+                var studentTemplate = Mustache.compile(document.getElementById("student-template").innerHTML);
+                var tableView = controls.getTableView(data, 2, 3);
+
+                var tableViewHtml = tableView.render(studentTemplate);
+
+                document.getElementById("students").innerHTML = tableViewHtml;
+            },
+            error = function (err) {
+                return console.log(err);
+            }
+        );
+
+        $("#students").on("click", "td", function () {
+            var marksTemplate = Mustache.compile(document.getElementById("marks-template").innerHTML);
+            var tableView = controls.getTableView(students, 1, 1);
+
+            var studentId = $(this).find('.student').attr('id');
+            var tableViewHtml = tableView.renderMarks(marksTemplate, studentId - 1);
+
+            document.getElementById("marks").innerHTML = tableViewHtml;
+        })
+    </script>
+</body>
+</html>
