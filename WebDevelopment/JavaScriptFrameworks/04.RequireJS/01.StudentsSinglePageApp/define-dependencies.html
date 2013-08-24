@@ -1,0 +1,53 @@
+﻿<!--    
+Task 1
+
+- Using the web services develop a client application with two "pages"
+    -On the first page show all students
+    - The second page shows the marks of a student
+        Load the second page when a student from the first is clicked
+
+- Separate the application in the following modules:
+    - HttpRequester - performs HTTP GET and HTTP POST requests
+    - DataPersister - uses HttpRequester to fetch data from the storage (the web services)
+    - Controls - renders objects to HTML elements
+    - Application - handles event handlings, page load, etc…
+
+- Use promises for the HTTP requests (You can use Q.js, RSVP.js or any other library)
+- Use RequireJS to define and use your modules
+- Use mustache.js for templating the data
+- Use jQuery, prototype.js or native XmlHttpRequest to make the AJAX calls
+
+1. First start the Services (Students.Services project) to be able to load the data
+2. Then click on each student to see their marks (marks will be rendered in "another page")
+3. Refresh the page to return back to students list
+-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>RequireJS Task 1</title>
+	<script src="Scripts/libs/require.js" data-main="Scripts/app-config"></script>
+</head>
+<body>
+    <!-- Students template -->
+    <script type="x-mustache-template" id="student-template">
+        <div id="{{id}}">
+			<strong>{{firstName}} {{lastName}}</strong> <br />
+            <strong>Grade: {{grade}}</strong> <br />
+            <strong>Age: {{age}}</strong> <br />
+        </div>	
+    </script>
+
+     <!-- Marks template-->
+     <script type="x-mustache-template" id="marks-template">
+			{{#.}} 
+                {{subject}}: <strong>{{score}}</strong>							
+            {{/.}}
+            {{^.}}	   
+                This student has no marks, yet	  						
+            {{/.}}
+    </script>
+
+    <div id="content"></div>
+</body>
+</html>
