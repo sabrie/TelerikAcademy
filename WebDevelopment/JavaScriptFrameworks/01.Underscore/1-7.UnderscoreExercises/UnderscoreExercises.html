@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="scripts/underscoreExercises-AllTasks.js"></script>
+    <script src="scripts/class.js"></script>
+    <script src="scripts/underscore.min.js"></script>
+</head>
+<body>
+    <!--
+        -->
+    <script>
+        var Student = Class.create({
+            init: function (fname, lname, age, marks) {
+                this.fname = fname;
+                this.lname = lname;
+                this.age = age;
+                this.marks = marks;
+            },
+            toString: function () {
+                return this.fname + " " + this.lname;
+            }
+        });
+
+        var students = [
+			new Student("Doncho", "Minkov", 25, [6, 6, 6, 6]),
+			new Student("Joro", "Georgiev", 22, [5, 5, 6, 6]),
+			new Student("Niki", "Kostov", 18, [3, 4, 6, 6]),
+			new Student("Svetlin", "Nakov", 15, [5, 5, 5, 5]),
+			new Student("Ivaylo", "Kenov", 26, [3, 4, 4, 4]),
+            new Student("Atanas", "Atanasov", 50, [2, 2, 2, 3]),
+            new Student("Atanas", "Georgiev", 20, [3, 4, 4, 4])];
+
+
+        //Task 1
+        //Write a method that from a given array of students finds all students whose first 
+        //name is before its last name alphabetically. Print the students in descending order 
+        //by full name. Use Underscore.js
+        console.log("Task 1. Students whose first name is before their last name alphabetically in descending order by full name: ");
+        underscoreExercises.findStudentsByFname(students);
+        console.log("-------------------------------------------------");
+
+        //Task 2
+        //Write function that finds the first name and last name of 
+        //all students with age between 18 and 24. Use Underscore.js
+        console.log("Task 2. Students with age between 18 and 24: ");
+        underscoreExercises.studentsByAgeInRange(students, 18, 24);
+        console.log("-------------------------------------------------");
+
+        //Task 3
+        //Write a function that by a given array of students finds the student with highest marks
+        console.log("Task 3. Student with highest marks: ");
+        underscoreExercises.studentWithHighestMarks(students);
+        console.log("-------------------------------------------------");
+
+
+        var Animal = Class.create({
+            init: function (species, name, legsNumber) {
+                this.species = species;
+                this.name = name;
+                this.legsNumber = legsNumber;
+            },
+            toString: function () {
+                return "Species: " + this.species + ", " + "Name: " + this.name + " Legs: " + this.legsNumber + " ";
+            }
+        });
+
+        var animals = [
+			new Animal("mammals","cat", 4),
+			new Animal("mammals", "dog", 4),
+            new Animal("insects", "ant", 6),
+			new Animal("insects", "spider", 8),
+			new Animal("reptile", "crocodile", 4),
+			new Animal("reptile", "snake", 0)]
+
+        //Task 4
+        //Write a function that by a given array of animals, 
+        //groups them by species and sorts them by number of legs
+
+        console.log("Task 4. Animals grouped by species and sorted by number of legs: ");
+        underscoreExercises.groupAnimalsBySpecies(animals);
+        console.log("-------------------------------------------------");
+
+        //Task 5
+        //By a given array of animals, find the total number of legs
+        //Each animal can have 2, 4, 6, 8 or 100 legs
+
+        console.log("Task 5. Total number of legs: ");
+        underscoreExercises.sumAllAnimalsLegsNumber(animals);
+        console.log("-------------------------------------------------");
+
+        //Task 6
+        //By a given collection of books, find the most popular 
+        //author (the author with the biggest number of books)
+
+        var Book = Class.create({
+            init: function (name, author) {
+                this.name = name,
+                this.author = author;
+            },
+            toString: function () {
+                return this.name + ' ' + this.author;
+            }
+        });
+
+        var books = [
+            new Book("C# Fundamentals", "Nakov"),
+            new Book("JS Fundamentals", "Minkov"),
+            new Book("Databases", "Nakov"),
+            new Book("High quality code", "Nakov"),
+        ];
+
+        console.log("Task 6. Most popular author: ");
+        underscoreExercises.findMostCommonAuthor(books);
+        console.log("-------------------------------------------------");
+
+        // Task 7
+        //By an array of people find the most common first and last name. Use underscore.
+
+        var people = [
+            new Student("Doncho", "Minkov", 25, [6, 6, 6, 6]),
+			new Student("Doncho", "Ivanov", 22, [5, 5, 6, 6]),
+			new Student("Niki", "Ivanov", 18, [3, 4, 6, 6]),
+			new Student("Svetlin", "Ivanov", 15, [5, 5, 5, 5]),
+			new Student("Doncho", "Petrov", 26, [3, 4, 4, 4]),
+            new Student("Atanas", "Atanasov", 50, [2, 2, 2, 3]),
+            new Student("Atanas", "Ivanov", 20, [3, 4, 4, 4])];
+
+        console.log("Task 7.");
+        console.log("Most common first name: ");
+        underscoreExercises.findMostCommonFirstName(people);
+        console.log("Most common last name: ");
+        underscoreExercises.findMostCommonLastName(people);
+        console.log("-------------------------------------------------");
+        </script>
+</body>
+</html>
