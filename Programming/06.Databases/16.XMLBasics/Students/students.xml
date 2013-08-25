@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<students culture="en-US" 
+          xmlns="urn:students"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.nakov.com/schemas/students file://./students.xsd"
+          name="students" >
+  <student>
+    <name>Pesho Peshev</name>
+    <sex>Male</sex>
+    <birthdate>10.10.1991</birthdate>
+    <phone>0888 123 456</phone>
+    <email>pesho@gmail.com</email>
+    <course>Programming</course>
+    <specialty>Programming</specialty>
+    <faculty-number>123456</faculty-number>
+    <passed-exams>
+      <exam>
+        <exam-name>C# Part 1</exam-name>
+        <tutor>Svetlin Nakov</tutor>
+        <score>6.0</score>
+      </exam>
+      <exam>
+        <exam-name>JavaScript Part 1</exam-name>
+        <tutor>Doncho Minkov</tutor>
+        <score>5.0</score>
+      </exam>
+    </passed-exams>
+  </student>
+</students>
