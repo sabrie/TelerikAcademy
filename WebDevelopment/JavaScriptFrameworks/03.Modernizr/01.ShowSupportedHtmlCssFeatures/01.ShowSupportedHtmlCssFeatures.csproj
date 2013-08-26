@@ -62,7 +62,7 @@
     <None Include="scripts\libs\jquery-2.0.3.intellisense.js" />
     <Content Include="scripts\libs\jquery-2.0.3.js" />
     <Content Include="scripts\libs\jquery-2.0.3.min.js" />
-    <Content Include="scripts\libs\au-parser.js" />
+    <Content Include="scripts\libs\ua-parser.js" />
     <Content Include="scripts\libs\class.js" />
     <Content Include="scripts\libs\modernizr-2.6.2.js" />
     <Content Include="scripts\libs\modernizr-2.6.2.min.js" />
@@ -82,9 +82,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="scripts\app\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
