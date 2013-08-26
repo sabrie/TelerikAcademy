@@ -9,9 +9,6 @@ namespace Students.Services.Models
     [DataContract]
     public class Mark
     {
-        [DataMember(Name = "id")]
-        public int Id { get; set; }
-
         [DataMember(Name = "subject")]
         public string Subject { get; set; }
 

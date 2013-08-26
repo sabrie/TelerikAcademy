@@ -21,7 +21,7 @@ namespace Students.Services.Controllers
     public class StudentsController : ApiController
     {
         private static IList<Student> students { get; set; }
-        
+
         // GET api/students
         public IList<Student> Get()
         {
@@ -33,12 +33,16 @@ namespace Students.Services.Controllers
         public IList<Mark> GetMarks(int id)
         {
             var students = GenerateStudents();
+            if (students[id-1].Marks!=null)
+            {
+                return students[id - 1].Marks;
+            }
 
-            return students[id-1].Marks;
+            return new List<Mark>();
         }
 
         public IList<Student> GenerateStudents()
-        {            
+        {
             IList<Student> students = new List<Student>
             {
                 new Student(1, "Doncho", "Minkov", 5, 18, new List<Mark>{ new Mark("Math", 4), new Mark("JavaScript", 6)}),

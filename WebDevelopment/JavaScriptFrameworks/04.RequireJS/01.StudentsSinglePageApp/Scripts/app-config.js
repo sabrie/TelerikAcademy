@@ -59,4 +59,8 @@ require(["jquery","mustache", "app/data-persister", "app/controls"], function ($
     //    var listViewHtml = listView.renderMarks(marksTemplate, studentId - 1);
     //    document.getElementById("content").innerHTML = listViewHtml;
     //})
+
+    //$("#ul").on("click", "li", function () {
+    //    $(this).siblings().hide();
+    //});
 });
