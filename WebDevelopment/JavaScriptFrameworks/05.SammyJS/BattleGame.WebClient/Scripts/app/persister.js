@@ -18,8 +18,8 @@ define(["class", "http-requester", "cryptoJS"],
         function clearUserData() {
             localStorage.removeItem("nickname");
             localStorage.removeItem("sessionKey");
-            nickname = "";
-            sessionKey = "";
+            nickname = null;
+            sessionKey = null;
         }
 
         var MainPersister = Class.create({

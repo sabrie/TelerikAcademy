@@ -25,68 +25,69 @@
         }
     });
 
-	require(["jquery", "sammy", "controller", "persister", "ui", "mustache"], function ($, sammy, controllers, persisters, ui, mustache) {
-	    
-	    var controller = controllers.get();
-	    var url = "http://localhost:22954/api/";
-	    var persister = persisters.get(url);
-	    var selector = "#main-content";
+    require(["jquery", "sammy", "controller", "persister", "ui", "mustache"], function ($, sammy, controllers, persisters, ui, mustache) {
 
-	    var app = sammy(selector, function () {
-	        
-	        this.get("#/", function () {
-	            var nickname = localStorage.getItem("nickname");
-	            var sessionKey = localStorage.getItem("sessionKey");
-	            if (persister.isUserLoggedIn()) {
-	                document.location.href = "#/create-game";
-	            } else {
-	                controller.loadUI(selector);
-	            }
-	        });
+        var controller = controllers.get();
+        var url = "http://localhost:22954/api/";
+        var persister = persisters.get(url);
+        var selector = "#main-content";
 
-	        this.get("#/create-game", function () {
+        var app = sammy(selector, function () {
 
-	            if (controller.persister.isUserLoggedIn()) {
-	                controller.loadGameUI(selector);
-	                var templateHtml = $("#create-game-template").html();
-	                document.getElementById("game-holder").innerHTML = templateHtml;
+            this.get("#/", function () {
+                if (persister.isUserLoggedIn()) {
+                    debugger;
+                    document.location.href = "#/create-game";
+                } else {
+                    controller.loadUI(selector);
+                }
+            });
 
-	            } else {
-	                document.location.href = "#/";
-	            }         
-	        });
+            this.get("#/create-game", function () {
 
-	        this.get("#/my-games", function () {
+                if (controller.persister.isUserLoggedIn()) {
+                    controller.loadGameUI(selector);
+                    var templateHtml = $("#create-game-template").html();
+                    document.getElementById("game-holder").innerHTML = templateHtml;
 
-	            var myGamesTemplate = $("#my-games-template").html();
-	            var myGames = persister.game.myActive(function (data) {
-	                var rendered = mustache.render(myGamesTemplate, data);
-	                document.getElementById("game-holder").innerHTML = rendered;
-	            }, function (error) {
-	                console.log(error);
-	            });
-	        });
+                } else {
+                    document.location.href = "#/";
+                }
+            });
 
-	        this.get("#/open-games", function () {	            
+            this.get("#/my-games", function () {
 
-	            var openGamesTemplate = $("#open-games-template").html();
-	            var games = persister.game.open(function (data) {
-	                var rendered = mustache.render(openGamesTemplate, data);
+                var myGamesTemplate = $("#my-games-template").html();
+                var myGames = persister.game.myActive(function (data) {
+                    var rendered = mustache.render(myGamesTemplate, data);
                     document.getElementById("game-holder").innerHTML = rendered;
-	            }, function (error) {
-	                console.log(error);
-	            });	            
-	        });
+                }, function (error) {
+                    console.log(error);
+                });
+            });
 
-	        this.get("#/logout", function () {
+            this.get("#/open-games", function () {
 
-	            persister.user.logout();
-	            document.location.href = "#/";
-	            $("#game-holder").empty();
-	            controller.loadUI(selector);
-	        });
-	    });
+                var openGamesTemplate = $("#open-games-template").html();
+                var games = persister.game.open(function (data) {
+                    var rendered = mustache.render(openGamesTemplate, data);
+                    document.getElementById("game-holder").innerHTML = rendered;
+                }, function (error) {
+                    console.log(error);
+                });
+            });
 
-	    app.run("#/");  
-	});
+            this.get("#/logout", function () {
+                var self = this;
+                persister.user.logout(function () {
+                    //self.redirect("#/");
+                    $("#game-holder").empty();
+                    document.location.href = "#/";
+                    controller.loadUI(selector);
+                }); 
+            });
+        });
+
+        app.run("#/");
+    });
 }());
