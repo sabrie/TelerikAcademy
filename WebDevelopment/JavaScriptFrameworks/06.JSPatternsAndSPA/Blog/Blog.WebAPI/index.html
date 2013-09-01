@@ -1,0 +1,145 @@
+﻿<!--
+    Create a Forum SPA application. Users of the application can login, 
+    register and logout of the application. Once a users is logged in, 
+    they can create posts. Each post have title, content, postdate, creator 
+    and a set of tags. Logged-in users can also leave comments for posts
+    
+    Taks 1 
+    Create WebApi or Everlive application to store the data for the Forum application.
+    
+    Task 2
+    Create the following modules for your application:
+        Controls - UI controls (like ListView and ComboBox)
+        Data - fetch data from the server
+        Controller - receives user actions and renders UI 
+    
+    Task 3
+    Use Sammy.js to create routes for the Forum Application. Implement the following routes:
+        #/ and #/home opens the home page
+        #/posts - loads all posts from the server, ordered decreasingly by postdate
+        #/posts/{tags} - loads the posts from the server that have all of the tags in {tags}, ordered decreasingly
+        #/post/{postId} - loads the post with Id = postId, its comments and tags
+        #/post/{postId}/comment - leave a comment for a post with Id = postId
+   Tags should be visible on each page. 
+   RequireJS and mustache.js are optional
+    -->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Forum</title>
+    <script src="Scripts/libs/jquery-2.0.3.js"></script>
+    <script src="Scripts/libs/jquery-2.0.3.min.js"></script>
+    <script src="Scripts/libs/jquery.cookie.js"></script>
+    <script src="Scripts/libs/sammy-0.7.4.js"></script>
+    <script src="Scripts/libs/sammy-0.7.4.min.js"></script>
+    <script src="Scripts/libs/mustache.js"></script>
+    <script src="Scripts/libs/class.js"></script>
+    <script src="Scripts/libs/CryptoJS.js"></script>
+    <script src="Scripts/libs/extensions.js"></script>
+    <script src="Scripts/libs/http-requester.js"></script>
+    <script src="Scripts/libs/rsvp.min.js"></script>
+    <script src="Scripts/app/controller.js"></script>
+    <script src="Scripts/app/persister.js"></script>
+    <script src="Scripts/app/ui.js"></script>
+    <script src="Scripts/app.js"></script>
+
+    <style>
+        #btn-logout{
+            border: 1px solid black;
+            padding: 3px;
+            margin: 5px;
+            text-decoration: none;
+            background-color: #dedede;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <script type="x-mustache-template" id="posts-template">
+        <header>
+        <h2>All Posts</h2>	
+        </header>
+        <ul class="posts-list">
+        {{#.}} 
+            <li id={{id}}>
+                <a href="#/post/{{id}}"><strong>Title: {{title}}</strong></a><br />
+                <span> posted by <strong>{{postedBy}}</strong></span><br />
+                <span> on {{postDate}} <span><br />
+            </li>
+        {{/.}} 
+      </ul>			
+    </script>
+
+    <script type="x-mustache-template" id="posts-by-tags">
+        <header>
+        <h2>Posts by tags</h2>	
+        </header>
+        <ul class="posts-list">
+        {{#.}} 
+            <li id={{id}}>
+                <a href="#/post/{{id}}" >{{title}}</a>
+                <span> by {{postedBy}}</span>
+            </li>
+        {{/.}} 
+      </ul>			
+    </script>
+
+    <script type="x-mustache-template" id="post">
+        <header>
+        <h2>Single Post</h2>	
+        </header>
+        {{#.}} 
+            <div id={{id}}>
+                <strong>Title: <a href="#/post/{{id}}/comment" >{{title}}</a></strong><br />
+                <span> Posted by: <strong>{{postedBy}}</strong></span><br/>
+                <span> on {{postDate}}</span><br/>
+                <p>
+                    <strong>Tags: </strong><br />
+                {{#tags}}
+                    <a href="#/posts/{{.}}">{{.}}</a>
+                {{/tags}}
+                </p>
+                <p><strong>Post Content: </strong><br/>{{text}}</p> 
+                <p><strong>Comments: </strong></p>
+                {{#comments}}
+                 <div>
+                    <p>
+                        {{text}}
+                    </p>
+                    <span>Commented by: {{commentedBy}} on {{postDate}}</span>
+                </div>
+                {{/comments}}
+            </div>
+        {{/.}} 
+      </ul>			
+    </script>
+
+    <script type="x-mustache-template" id="comments">
+        <header>
+        <h2>Comments</h2>	
+        </header>
+        <ul class="comments-list">
+        {{#.}} 
+            <li id={{id}}>
+                <p>
+                    {{text}}
+                </p>
+                <span>Commented by: {{commentedBy}} on {{postDate}}</span>
+            </li>
+        {{/.}} 
+      </ul>			
+    </script>
+
+    <div>
+        <p class="important"><strong>Clear browser cache and the localStorage - just in case :-)</strong></p>
+    </div>
+    <div id="wrapper">
+        <header>
+            <h2>Telerik Academy Forum</h2>
+        </header>
+        <div id="main-content"></div>
+        <div id="posts-holder"></div>
+    </div>
+</body>
+</html>
