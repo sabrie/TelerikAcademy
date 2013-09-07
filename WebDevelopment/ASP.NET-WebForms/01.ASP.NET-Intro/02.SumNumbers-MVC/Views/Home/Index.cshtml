@@ -1,0 +1,44 @@
+﻿@model _02.SumNumbers_MVC.Models.Summator
+
+@*
+    Task 2
+    -----
+    
+    Write a simple application to sum numbers in ASP.NET MVC.
+*@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Summator</title>
+    <style>
+        label, span {
+            display: inline-block;
+            width: 130px;
+        }
+
+        body {
+            background-color: #dedede;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        A simple application to sum numbers in ASP.NET MVC.
+    </p>
+    <h1>Summator</h1>
+    @using (Html.BeginForm("Index", "Home"))
+    {
+        @Html.LabelFor(m => m.FirstNumber, "First number: ")
+        @Html.TextBoxFor(m => m.FirstNumber)<br />
+
+        @Html.LabelFor(m => m.SecondNumber, "Second number: ")
+        @Html.TextBoxFor(m => m.SecondNumber)<br />
+
+        <input type="submit" value="Sum" /><br />
+        <span>Sum: </span>
+        @Html.DisplayTextFor(m => m.Sum);
+    }
+</body>
+</html>
