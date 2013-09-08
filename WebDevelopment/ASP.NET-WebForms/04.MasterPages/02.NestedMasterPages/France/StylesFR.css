@@ -1,0 +1,27 @@
+﻿#france-sidebar ul {
+    list-style: none;
+}
+
+#france-sidebar ul li {
+    display: inline;
+    padding: 20px;
+    font-weight: bold;
+}
+
+#france-sidebar ul a {
+    text-decoration: none;
+    color: blue;
+}
+
+#france-sidebar ul a:hover {
+    color: yellow;
+}
+
+#FranceHeader{
+    color: blue;
+}
+
+#about{
+    text-align: left;
+    padding: 50px;
+}

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20623.1 VSUPREVIEW
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.UserProfile", "01.UserProfile\01.UserProfile.csproj", "{1CB2C775-9A87-48DD-ABFD-25CC61CA8C48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.NestedMasterPages", "02.NestedMasterPages\02.NestedMasterPages.csproj", "{A1777A5F-E5C0-4DA8-8F14-9B74D206FF24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CB2C775-9A87-48DD-ABFD-25CC61CA8C48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CB2C775-9A87-48DD-ABFD-25CC61CA8C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CB2C775-9A87-48DD-ABFD-25CC61CA8C48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CB2C775-9A87-48DD-ABFD-25CC61CA8C48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1777A5F-E5C0-4DA8-8F14-9B74D206FF24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1777A5F-E5C0-4DA8-8F14-9B74D206FF24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1777A5F-E5C0-4DA8-8F14-9B74D206FF24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1777A5F-E5C0-4DA8-8F14-9B74D206FF24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

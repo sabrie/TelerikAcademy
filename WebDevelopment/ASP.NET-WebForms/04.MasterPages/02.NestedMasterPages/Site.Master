@@ -1,0 +1,40 @@
+﻿<%--
+    Task 2
+    ---------
+    
+    Implement a Web Forms application using nested master pages. It should be a Web site of 
+    international company. You should have master layout page and few different nested master 
+    pages for each country and few content pages in different language, for each country. 
+    Define "Home", "About" and "Contacts" pages for each country using its master page.
+    --%>
+
+
+<%@ Master Language="C#" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Telerik Corp</title>
+    <link href="Site.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="FormMain" runat="server">
+        <header id="header">
+            <h1 id="main-heading">Telerik</h1>
+        </header>
+        
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderHeader" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderPageContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer id="footer">
+            (c) 2013 Telerik Corp.
+        </footer>
+    </form>
+</body>
+</html>

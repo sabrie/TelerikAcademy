@@ -1,0 +1,52 @@
+﻿body {
+    background: #dedede;
+    text-align: center;
+}
+
+#header{
+    background-color: #d76666;
+    text-align: center;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+#main-heading{
+    color: #dedede;
+}
+
+#main-content {
+    float: left;
+    left: 160px;
+    padding: 30px;
+}
+
+#main-content h2 {
+    font-weight: bold;
+}
+
+.country {
+    text-decoration: none;
+    padding: 10px;
+    margin: 20px;
+    color: #dedede;
+    font-weight: bold;
+    background-color: #d76666;
+    border-radius: 6px;
+}
+
+#mainPageContent{
+    margin: 70px;
+}
+
+.country:hover {
+    color: #4cff00;
+}
+
+#footer {
+    clear: both;
+    text-align:center;
+    background: #EEEEEE;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 30px;
+}

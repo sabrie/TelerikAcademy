@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" 
+    AutoEventWireup="true" CodeBehind="MasterPageBulgaria.master.cs" 
+    Inherits="_02.NestedMasterPages.Bulgaria.MasterPageBulgaria" %>
+
+<asp:Content ID="CssLink" ContentPlaceHolderID="head" runat="server">
+    <link href="StylesBG.css" rel="stylesheet" />
+</asp:Content>
+<asp:Content ID="BulgariaContentPageHeader" ContentPlaceHolderID="ContentPlaceHolderHeader" runat="server">
+    <header id="BulgariaHeader">
+        <h2>Телерик България</h2>
+    </header>
+</asp:Content>
+<asp:Content ID="BulgariaContentPage" ContentPlaceHolderID="ContentPlaceHolderPageContent" runat="server">
+    <aside id="bulgaria-sidebar">
+        <ul>
+            <li><a href="../../MainPage.aspx">Основна страница</a></li>
+            <li><a href="BulgariaHome.aspx">Начало</a></li>
+            <li><a href="BulgariaAbout.aspx">За нас</a></li>
+            <li><a href="BulgariaContacts.aspx">Контакти</a></li>            
+        </ul>
+    </aside>
+    <div class="content"> 
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderBulgaria" runat="server" />
+    </div>
+</asp:Content>

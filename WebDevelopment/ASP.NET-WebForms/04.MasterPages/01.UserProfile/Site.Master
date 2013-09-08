@@ -1,0 +1,53 @@
+﻿
+<%--
+    Task 1
+    --------
+
+    Implement a simple Web Forms application using master pages. The application 
+    should be like a user profile – separate pages for Personal Info, Friends, Additional 
+    Info, etc. + Sidebar for navigation.
+--%>
+
+
+<%@ Master 
+    Language="C#" 
+    AutoEventWireup="true" 
+    CodeBehind="Site.master.cs" 
+    Inherits="_01.UserProfile.Site"
+     %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>User Profile</title>
+    <link href="Site.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="UserProfile" runat="server">
+        <header id="header">
+            <h1 id="main-heading">Telerik Academy</h1>
+        </header>
+        <aside id="sidebar">
+            <div class="sidebar-title">Menu</div>
+            <ul>
+                <li><a href="~/PersonalInfo.aspx" runat="server">Personal Info</a></li>
+                <li><a href="~/Friends.aspx" runat="server">Friends</a></li>
+                <li><a href="~/AdditonalInfo.aspx" runat="server">Additional Info</a></li>
+            </ul>
+        </aside>
+
+        <section id="main-content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">        
+            </asp:ContentPlaceHolder>
+        </section>
+        
+        <footer id="footer">
+            (c) 2013 Telerik Corp.
+        </footer>
+    </form>
+</body>
+</html>

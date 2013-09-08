@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" 
+    AutoEventWireup="true" CodeBehind="MasterPageUSA.master.cs" 
+    Inherits="_02.NestedMasterPages.USA.MasterPageUSA" %>
+
+<asp:Content ID="CssLink" ContentPlaceHolderID="head" runat="server">
+    <link href="StylesUsa.css" rel="stylesheet" />
+</asp:Content>
+<asp:Content ID="UsaContentPageHeader" ContentPlaceHolderID="ContentPlaceHolderHeader" runat="server">
+    <header id="UsaHeader">
+        <h2>Telerik USA</h2>
+    </header>
+</asp:Content>
+<asp:Content ID="UsaContentPage" ContentPlaceHolderID="ContentPlaceHolderPageContent" runat="server">
+    <aside id="usa-sidebar">
+        <ul>
+            <li><a href="../../MainPage.aspx">Main Page</a></li>
+            <li><a href="UsaHome.aspx">Home</a></li>
+            <li><a href="UsaAbout.aspx">About</a></li>
+            <li><a href="UsaContacts.aspx">Contacts</a></li>            
+        </ul>
+    </aside>
+    <div class="content"> 
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderUsa" runat="server" />
+    </div>
+</asp:Content>

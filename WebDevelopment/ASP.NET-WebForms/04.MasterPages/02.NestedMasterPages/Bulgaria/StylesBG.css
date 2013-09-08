@@ -1,0 +1,28 @@
+﻿#bulgaria-sidebar ul {
+    list-style: none;
+}
+
+#bulgaria-sidebar ul li {
+    display: inline;
+    padding: 20px;
+    font-weight: bold;
+}
+
+#bulgaria-sidebar ul a {
+    text-decoration: none;
+    color: green;
+}
+
+#bulgaria-sidebar ul a:hover{
+    color: #d76666;
+}
+
+#BulgariaHeader{
+    color: green;
+}
+
+#about{
+    text-align: left;
+    padding: 50px;
+}
+
