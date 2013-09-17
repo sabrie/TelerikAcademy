@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CompanyWebsite.Site" %>
+
+<!DOCTYPE html>
+
+<%--
+    
+    Task
+    -----------
+
+    Create a Web application with two-levels of site navigation with the following structure:
+        Home
+        Offices
+            Bulgaria
+                Sofia, Varna, Plovdiv
+            U.K.
+                London, Bristol, Manchester
+        About
+        Contacts
+
+Use master pages, menus, breadcrumbs and site map.--%>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><%# Page.Title %> - International Company</title>
+    <link href="Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="FormCompanyWebsite" runat="server">
+        <div class="page">
+            <div class="header">
+                <div class="title">
+                    <h1>International Company</h1>
+                </div>
+
+                <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" />
+                <div class="clear hideSkiplink">
+                    <asp:Menu ID="NavigationMenu" runat="server" DataSourceID="SiteMapDataSource" EnableViewState="false"
+                        StaticDisplayLevels="2" Orientation="Horizontal" StaticEnableDefaultPopOutImage="false" MaximumDynamicDisplayLevels="1"
+                        CssClass="menu">
+                    </asp:Menu>
+                </div>
+                <asp:SiteMapPath ID="SiteMapPathBreadcrump" runat="server" />
+            </div>
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderMainContent" runat="server">
+                </asp:ContentPlaceHolder>
+
+            <div class="clear" />
+            <div class="footer">
+                &copy; <%= DateTime.Now.Year %> All rights reserved.
+            </div>
+        </div>
+    </form>
+</body>
+</html>
