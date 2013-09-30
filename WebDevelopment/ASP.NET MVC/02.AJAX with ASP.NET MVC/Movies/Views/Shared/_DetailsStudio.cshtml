@@ -1,0 +1,27 @@
+﻿@model Movies.Models.Studio
+
+<fieldset>
+    <legend>Studio Details</legend>
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+    </dl>
+</fieldset>
+<p>
+    @Html.ActionLink("Hide Details", "Index", null, new { @class = "btn" })
+</p>
+

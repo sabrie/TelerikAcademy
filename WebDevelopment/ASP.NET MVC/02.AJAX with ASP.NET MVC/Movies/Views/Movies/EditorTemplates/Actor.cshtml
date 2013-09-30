@@ -1,0 +1,19 @@
+﻿@using Movies.Models;
+@using Movies.Data;
+
+@model Movies.Models.Actor
+@{
+    var context = new Movies.Data.MoviesContext();
+    var actors = context.Actors;
+    var result = new List<SelectListItem>();
+    foreach (var actor in actors)
+    {
+        result.Add(new SelectListItem()
+        {
+            Text = actor.Name,
+            Value = actor.Id.ToString()
+        });
+    }
+}
+
+@Html.DropDownListFor(a => a.Name, result)

@@ -1,0 +1,86 @@
+﻿@model Movies.Models.MovieViewModel
+
+@using (Ajax.BeginForm(
+    "Create",
+    "Movies",
+    new AjaxOptions
+    {
+        HttpMethod = "POST",
+        OnSuccess = "created"
+    },
+    new { id = "form-create-studio" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset class="form-horizontal">
+        <legend>Create Movie</legend>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.Title, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.Title)
+                @Html.ValidationMessageFor(model => model.Title, null, new { @class = "help-inline" })
+            </div>
+        </div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.Director, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.Director)
+                @Html.ValidationMessageFor(model => model.Director, null, new { @class = "help-inline" })
+            </div>
+        </div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.Year, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.Year)
+                @Html.ValidationMessageFor(model => model.Year, null, new { @class = "help-inline" })
+            </div>
+        </div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.LeadingFemaleRoleId, "Leading Female Role", new { @class = "control-label" })
+            <div class="controls">
+                @Html.DropDownListFor(model => model.LeadingFemaleRoleId, (IEnumerable<SelectListItem>)ViewBag.FemaleActors)
+                @Html.ValidationMessageFor(model => model.LeadingFemaleRoleId, null, new { @class = "help-inline" })
+            </div>
+        </div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.LeadingMaleRoleId, "Leading Male Role", new { @class = "control-label" })
+            <div class="controls">
+                @Html.DropDownListFor(model => model.LeadingMaleRoleId, (IEnumerable<SelectListItem>)ViewBag.MaleActors)
+                @Html.ValidationMessageFor(model => model.LeadingMaleRoleId, null, new { @class = "help-inline" })
+            </div>
+        </div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.StudioId, new { @class = "control-label" })
+            <div class="controls">
+                @Html.DropDownListFor(model => model.StudioId, (IEnumerable<SelectListItem>)ViewBag.Studios)
+                @Html.ValidationMessageFor(model => model.StudioId, null, new { @class = "help-inline" })
+            </div>
+        </div>
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Create" class="btn" />
+            @Html.ActionLink("Cancel", "Index", null, new { @class = "btn" })
+        </div>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script>
+    function created(data) {
+        $("#partial-content").html(data);
+        $.get('@Url.Action("IndexPartial","Movies")', function (data) {
+            $('#details-table').replaceWith(data);
+        });
+        $("#create-button").show();
+    }
+</script>

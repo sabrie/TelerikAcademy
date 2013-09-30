@@ -1,0 +1,33 @@
+﻿@model Movies.Models.Actor
+
+<fieldset>
+    <legend>Actor Details</legend>
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+    </dl>
+</fieldset>
+<p>
+    @Html.ActionLink("Hide Details", "Index", null, new { @class = "btn" })
+</p>

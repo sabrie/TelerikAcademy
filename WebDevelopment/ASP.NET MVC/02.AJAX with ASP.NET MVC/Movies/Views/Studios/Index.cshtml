@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Movies.Models.Studio>
+
+@{
+    ViewBag.Title = "Studios"; 
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div id="detials">
+    @Html.Partial("_IndexStudios", Model)
+</div>
+
+<p>
+    @Ajax.ActionLink("Create New", "Create", null,
+        new AjaxOptions
+        {
+            HttpMethod = "GET",
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "partial-content",
+            OnSuccess = "hideCreateButton"
+        }, new { @class = "btn", id = "create-button"})
+</p>
+
+<div id="partial-content"></div>
+
+<script type="text/javascript" src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script>
+    function hideCreateButton() {
+        $("#create-button").hide();
+    }
+</script>
+

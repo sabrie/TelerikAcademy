@@ -1,0 +1,56 @@
+﻿@model Movies.Models.Studio
+
+@using (Ajax.BeginForm(
+    "Edit",
+    "Studios",
+    new AjaxOptions
+    {
+        HttpMethod = "POST",
+        OnSuccess = "edited"
+    },
+    new { id = "form-edit-studio" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset class="form-horizontal">
+        <legend>Edit Studio</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.Name, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.Name)
+                @Html.ValidationMessageFor(model => model.Name, null, new { @class = "help-inline" })
+            </div>
+        </div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.Address, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.Address)
+                @Html.ValidationMessageFor(model => model.Address, null, new { @class = "help-inline" })
+            </div>
+        </div>
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Edit" class="btn" />
+            @Html.ActionLink("Cancel", "Index", null, new { @class = "btn"})
+        </div>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script>
+    function edited(data) {
+        $("#partial-content").html(data);
+        $.get('@Url.Action("IndexPartial", "Studios")', function (data) {
+            $('#studio-details-table').replaceWith(data);
+        });
+        $("#create-button").show();
+    }
+</script>

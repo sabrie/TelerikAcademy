@@ -1,0 +1,52 @@
+﻿@model Movies.Models.Studio
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Delete Studio</legend>
+
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+    </dl>
+</fieldset>
+@using (Ajax.BeginForm(
+    "Delete",
+    "Studios",
+    new AjaxOptions
+    {
+        HttpMethod = "POST",
+        OnSuccess = "deleted"
+    },
+    new { id = "form-delete-movie" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Delete" class="btn" /> 
+        @Html.ActionLink("Cancel", "Index", null, new { @class = "btn" })
+    </div>
+}
+
+<script>
+    function deleted() {
+        $("#partial-content").empty();
+        $.get('@Url.Action("IndexPartial","Studios")', function (data) {
+            $('#studio-details-table').replaceWith(data);
+        });
+        $("#create-button").show();
+    }
+</script>
