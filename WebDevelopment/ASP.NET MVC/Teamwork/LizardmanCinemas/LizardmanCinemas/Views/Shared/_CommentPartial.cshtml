@@ -1,0 +1,12 @@
+﻿@model LizardmanCinemas.ViewModels.CommentViewModel
+
+<div>
+    <p>@Model.CommentText</p>
+    <div class="pull-left">
+        <em>
+            commented by <span class="bold">@Html.ActionLink(Model.Author, "Details", "Users", new { id = Model.AuthorId }, null)</span>
+            on @string.Format("{0:dd.MM.yyyy}", Model.CreatedOn)
+        </em>
+    </div>
+    <hr />
+</div>

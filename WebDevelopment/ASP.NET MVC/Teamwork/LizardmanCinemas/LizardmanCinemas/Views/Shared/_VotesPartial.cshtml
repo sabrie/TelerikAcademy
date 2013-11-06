@@ -1,0 +1,7 @@
+﻿@model LizardmanCinemas.ViewModels.MovieFullDetails
+
+@{
+    var count = Model.Votes.Where(x => x.MovieId == Model.Id).Sum(x => x.IsLike);
+}
+
+<div class="movie-details">Votes: @count</div>
