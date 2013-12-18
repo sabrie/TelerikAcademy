@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStoreClient", "MusicStoreClient\MusicStoreClient.csproj", "{A07ED7C1-3416-4E36-9CB8-952204D4CE10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStoreData", "MusicStoreData\MusicStoreData.csproj", "{8F113522-D21C-456B-B9D0-F6CB4B75FDA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStoreWebApi", "MusicStoreWebApi\MusicStoreWebApi.csproj", "{B32B2205-27F3-44B6-8975-1A80A0CE3039}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A07ED7C1-3416-4E36-9CB8-952204D4CE10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A07ED7C1-3416-4E36-9CB8-952204D4CE10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A07ED7C1-3416-4E36-9CB8-952204D4CE10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A07ED7C1-3416-4E36-9CB8-952204D4CE10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F113522-D21C-456B-B9D0-F6CB4B75FDA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F113522-D21C-456B-B9D0-F6CB4B75FDA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F113522-D21C-456B-B9D0-F6CB4B75FDA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F113522-D21C-456B-B9D0-F6CB4B75FDA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B32B2205-27F3-44B6-8975-1A80A0CE3039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B32B2205-27F3-44B6-8975-1A80A0CE3039}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B32B2205-27F3-44B6-8975-1A80A0CE3039}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B32B2205-27F3-44B6-8975-1A80A0CE3039}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
