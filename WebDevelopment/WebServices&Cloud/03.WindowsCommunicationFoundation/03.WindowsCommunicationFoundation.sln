@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.WcfServiceDayAsString.Console", "01.WcfServiceDayAsString.Console\01.WcfServiceDayAsString.Console.csproj", "{50138AD4-0A83-4F25-9D56-12F8DF9F7918}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.WcfServiceDayAsString.ConsoleClient", "02.WcfServiceDayAsString.ConsoleClient\02.WcfServiceDayAsString.ConsoleClient.csproj", "{9F09EE32-0BCA-4FA6-811A-E9F5091A0FC2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{50138AD4-0A83-4F25-9D56-12F8DF9F7918} = {50138AD4-0A83-4F25-9D56-12F8DF9F7918}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.WcfServiceStringOccurrencesCounter.Library", "03.WcfServiceStringOccurrencesCounter.Library\03.WcfServiceStringOccurrencesCounter.Library.csproj", "{15B3E0D2-6217-493A-A690-158C497F5318}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.WcfServiceStringOccurrencesCounter.Client", "05.WcfServiceStringOccurrencesCounter.Client\05.WcfServiceStringOccurrencesCounter.Client.csproj", "{C5A6C89B-CD6C-4790-94C7-3C14378F2D83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfHostedStringOccurrencesCounter", "WcfHostedStringOccurrencesCounter\WcfHostedStringOccurrencesCounter.csproj", "{59D9C70D-75B8-4611-8903-68603CDEF809}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50138AD4-0A83-4F25-9D56-12F8DF9F7918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50138AD4-0A83-4F25-9D56-12F8DF9F7918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50138AD4-0A83-4F25-9D56-12F8DF9F7918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50138AD4-0A83-4F25-9D56-12F8DF9F7918}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F09EE32-0BCA-4FA6-811A-E9F5091A0FC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F09EE32-0BCA-4FA6-811A-E9F5091A0FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F09EE32-0BCA-4FA6-811A-E9F5091A0FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F09EE32-0BCA-4FA6-811A-E9F5091A0FC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5A6C89B-CD6C-4790-94C7-3C14378F2D83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A6C89B-CD6C-4790-94C7-3C14378F2D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A6C89B-CD6C-4790-94C7-3C14378F2D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A6C89B-CD6C-4790-94C7-3C14378F2D83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59D9C70D-75B8-4611-8903-68603CDEF809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59D9C70D-75B8-4611-8903-68603CDEF809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59D9C70D-75B8-4611-8903-68603CDEF809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59D9C70D-75B8-4611-8903-68603CDEF809}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

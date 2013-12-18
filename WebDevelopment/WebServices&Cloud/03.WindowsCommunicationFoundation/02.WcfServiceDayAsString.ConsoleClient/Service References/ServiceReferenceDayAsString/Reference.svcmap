@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fe03e559-1918-4462-ad91-f31f10e298a7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54239/ServiceDayAsString.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceDayAsString.xsd" MetadataType="Schema" ID="2acfe5da-f671-4ff4-a1ca-994ace6ca0de" SourceId="1" SourceUrl="http://localhost:54239/ServiceDayAsString.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceDayAsString.wsdl" MetadataType="Wsdl" ID="1da7fcf9-d821-41b7-9738-cf91234f7788" SourceId="1" SourceUrl="http://localhost:54239/ServiceDayAsString.svc?wsdl" />
+    <MetadataFile FileName="ServiceDayAsString.disco" MetadataType="Disco" ID="7115be80-e7b2-4df7-b147-6efaa74162ee" SourceId="1" SourceUrl="http://localhost:54239/ServiceDayAsString.svc?disco" />
+    <MetadataFile FileName="ServiceDayAsString1.xsd" MetadataType="Schema" ID="9a846684-51d6-4cb4-95a6-016c0052e887" SourceId="1" SourceUrl="http://localhost:54239/ServiceDayAsString.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceDayAsString2.xsd" MetadataType="Schema" ID="ad405a87-47ec-4422-afbf-9ebf477a5d34" SourceId="1" SourceUrl="http://localhost:54239/ServiceDayAsString.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
