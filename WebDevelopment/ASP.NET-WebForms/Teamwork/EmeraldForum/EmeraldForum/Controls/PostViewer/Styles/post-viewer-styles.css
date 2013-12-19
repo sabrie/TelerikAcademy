@@ -1,0 +1,36 @@
+﻿.single-post {
+    margin: 1%;
+    display: inline-block;
+    padding: 2%;
+    border: 1px solid #aaa;
+    border-radius: 5%;
+    max-width: 50%;
+}
+
+.posted-by {
+    text-align: right;
+    font-style: italic;
+    color: #aaa;
+    font-size: 1rem;
+}
+
+.single-post-tag {
+    display: inline-block;
+    background-color: #0094ff;
+    margin-right: 1%;
+    color: #fff;
+}
+
+    .single-post-tag:hover {
+        text-decoration: none;
+        color: #000;
+    }
+
+.single-post-title {
+    color: black;
+}
+
+    .single-post-title:hover {
+        text-decoration: none;
+        color: #0094ff;
+    }

@@ -1,0 +1,224 @@
+﻿body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+/* styles for removing the background from form */
+.no-color {
+    background-color: white;
+    border-style: none;
+}
+
+.clear, .left, .right {
+    zoom: 1;
+}
+
+    .clear:after, .left:after, .right:after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+
+.left {
+    float: left;
+}
+
+.rigth {
+    float: right;
+}
+
+.info-box {
+    font-size: 0.7rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+#user-profile-picture {
+    width: 55%;
+    margin-right: 3%;
+}
+
+#user-manage-account {
+    width: 40%;
+}
+
+#current-email {
+    margin-bottom: 3%;
+}
+
+.all-posts {
+    margin: 10px;
+}
+
+#tagsContainer {
+    height: 200px;
+}
+
+.singleTag {
+    float: left;
+    width: 33%;
+}
+
+#home-title {
+    margin-bottom: 3%;
+}
+
+#post-title-container {
+    margin-left: 1%;
+    vertical-align: central;
+}
+
+#MainContent_headerPostTitle {
+    padding-left: 5%;
+    padding-top: 10%;
+}
+
+#post-creator-info, .post-comment-creator {
+    padding-right: 1%;
+    padding-bottom: 1%;
+    border-right: 1px dotted #aaa;
+    border-bottom: 1px dotted #aaa;
+}
+
+#post-tags, #manage-users-filters {
+    margin-top: 1%;
+    border-bottom: 1px solid #0094ff;
+    border-top: 1px solid #0094ff;
+}
+
+.main-title {
+    border-bottom: 1px solid #0094ff;
+}
+
+.create-post-input {
+    width: 60%;
+}
+
+#search-controls-container, #manage-users-search-title, #mange-users-search {
+    border-bottom: 1px dotted #aaa;
+}
+
+#UpdateProgressPosts {
+    color: #0094ff;
+}
+
+.post-comment-content {
+    padding-top: 1%;
+    padding-left: 2%;
+    max-width: 70%;
+}
+
+#user-posts, #current-user-info, .border-bottom-dot {
+    border-bottom: 1px dotted #aaa;
+}
+
+#current-user-info {
+    padding-bottom: 2%;
+}
+
+#manage-content {
+    width: 75%;
+}
+
+#admin-menu {
+    max-width: 25%;
+    border-right: 1px dotted #aaa;
+    padding-right: 2%;
+    margin-right: 2%;
+}
+
+    #admin-menu ul {
+        list-style-type: none;
+    }
+
+        #admin-menu ul li {
+            margin-bottom: 2%;
+        }
+
+.manage-users-single-user {
+    display: inline-block;
+    margin: 1%;
+    width: 40%;
+}
+
+.users-manage-options {
+    margin-left: 1%;
+}
+
+#LinkButtonBan, #LinkButtonUnban {
+    margin-top: 2%;
+}
+
+#edit-user-username {
+    color: #0094ff;
+}
+
+#edit-user-fields {
+    margin-left: 2%;
+    padding-left: 2%;
+    border-left: 1px dotted #aaa;
+}
+
+.edit-user-status, .banned-status {
+    font-weight: bold;
+    color: #f00;
+}
+
+.filter-radio, .filter-label {
+    display: inline-block;
+}
+
+.filter-label {
+    font-weight: bold;
+    margin-right: 3%;
+}
+
+#manage-users-filters {
+    margin-bottom: 2%;
+}
+
+.dynamicMenu {
+    display: block;
+    background-color: #151515;
+}
+
+    .dynamicMenu li {
+        padding: 10px;
+    }
+
+.nav li {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+
+
+.post-edit h4 {
+    display: inline;
+}
+
+.edit-comments {
+}
+
+.edit-comment-link {
+    float: right;
+}
+
+#mange-users-search {
+    padding-bottom: 1%;
+}
+
+#MainContent_divPostContent {
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.no-data {
+    font-weight: bold;
+    font-style: italic;
+}
+
+#main-container {
+    margin-top: 2%;
+}

@@ -1,0 +1,16 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AdministrationMasterPage.master.cs" Inherits="EmeraldForum.Administration.AdministrationMasterPage" %>
+
+<asp:Content ID="ContentAdministrationPanel" ContentPlaceHolderID="MainContent" runat="server">
+    <h1 class="main-title">Administration Panel</h1>
+    <div class="clear">
+        <div class="left" id="admin-menu">
+            <ul>
+                <li><a runat="server" href="~/Administration/ManagePosts.aspx" class="btn btn-primary btn-medium">Manage posts</a></li>
+                <li><a runat="server" href="~/Administration/ManageUsers.aspx" class="btn btn-primary btn-medium">Manage users</a></li>
+            </ul>
+        </div>
+        <div class="left" id="manage-content">
+            <asp:ContentPlaceHolder runat="server" ID="AdministrationContent"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+</asp:Content>

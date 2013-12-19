@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Default.aspx" title="Home"  description="Home page">
+    <siteMapNode url="~/Posts.aspx" title="Posts"  description="All posts" />
+    <siteMapNode url="~/CreatePost.aspx" title="Create post"  description="Create post" />
+    <siteMapNode url="~/Search.aspx" title="Search"  description="Search posts" />
+    <siteMapNode url="~/Tags.aspx" title="Tags"  description="All tags" />
+    <siteMapNode url="~/Users.aspx" title="Users"  description="All users" />
+    <siteMapNode url="~/Administration/Admin.aspx" title="Admin"  description="Administration panel">
+      <siteMapNode url="~/Administration/ManagePosts.aspx" title="Manage posts"  description="Manage posts" />
+      <siteMapNode url="~/Administration/ManageUsers.aspx" title="Manage users"  description="Manage users" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>
