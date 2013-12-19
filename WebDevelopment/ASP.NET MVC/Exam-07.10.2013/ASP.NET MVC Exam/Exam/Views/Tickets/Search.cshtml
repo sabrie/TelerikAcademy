@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Exam.Models.TicketSearchViewModel>
+
+@{
+    ViewBag.Title = "Search results";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Category</th>
+        <th>Author</th>
+    </tr>
+    @foreach (var ticket in Model)
+    {
+        <tr>
+            <td>@ticket.Title</td>
+            <td>@ticket.Category</td>
+            <td>@ticket.Author</td>
+        </tr>
+    }    
+</table>
+

@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Exam.Models.TicketsListViewModel>
+
+@{
+    ViewBag.Title = "Tickets List";
+}
+
+<h1>@ViewBag.Title</h1>
+
+<div class="row-fluid">
+    @using (Html.BeginForm("Search", "Tickets", FormMethod.Post))
+    {
+        <div>
+            Search by model
+        </div>
+    <div>
+        @(Html.Kendo()
+        .DropDownList()
+        .Name("ticketsearch")
+            .DataTextField("Name")
+            .DataValueField("Name")
+        .OptionLabel("Select category")
+        .DataSource(data =>
+        {
+            data.Read(read => read.Action("GetTicketsCategoryData", "Tickets"));
+            data.ServerFiltering(true);
+        }))
+    </div><br />
+        <div>
+            <input type="submit" value="Search" class="btn"/>
+        </div>
+    }
+</div>
+
+<div>
+
+            @(Html.Kendo()
+    .ListView<Exam.Models.TicketsListViewModel>()
+    .Name("tickets")
+    .TagName("div")
+    .ClientTemplateId("ticket-template")
+    .Pageable()
+    .DataSource(data =>
+    {
+        data.Read("GetTickets", "Tickets");
+        data.ServerOperation(true);
+        data.PageSize(5);
+    }))
+</div>
+
+<script id="ticket-template" type="text/x-kendo-template">
+    <div class="row-fluid">
+        <h4 class="span4">
+            #: Title #
+        </h4>
+        <h4 class="span4">
+            #: Category #
+        </h4>
+        <h4 class="span4">
+            #: Author #
+        </h4>
+        <h4 class="span4">
+            #if(Priority === 0)
+            {#
+            <span>Low</span>
+            #}#
+            #if(Priority === 1)
+            {#
+            <span>Medium</span>
+            #}#
+
+            #if(Priority === 2)
+            {#
+            <span>High</span>
+            #}#
+        </h4>
+    </div>
+</script>
